@@ -14,5 +14,7 @@ dependencies:
   - netcdf4
   - pyyaml
   - nco
+  - salib
   - pip:
       - parsac
+      - https://www.parallelpython.com/downloads/pp/pp-1.6.4.4.zip
