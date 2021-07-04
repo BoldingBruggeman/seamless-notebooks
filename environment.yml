@@ -13,5 +13,6 @@ dependencies:
   - ipympl
   - netcdf4
   - pyyaml
+  - nco
   - pip:
       - parsac
