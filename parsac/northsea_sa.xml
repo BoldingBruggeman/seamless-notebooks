@@ -6,7 +6,6 @@
   <executable path="gotm" shell="True"/>
   <setup path="../setups/northsea"/>
   <parameters>
-    <parameter file="gotm.yaml" variable="turbulence/turb_param/k_min" minimum="1e-6" maximum="1e-5" logscale="True" />
     <parameter file="fabm.yaml" variable="instances/P1/parameters/phim" minimum="0.042" maximum="0.078" />
     <parameter file="fabm.yaml" variable="instances/P2/parameters/phim" minimum=" 0.0175" maximum="0.0325" />
     <parameter file="fabm.yaml" variable="instances/P3/parameters/phim" minimum="0.0105" maximum="0.0195" />
