@@ -1,0 +1,18 @@
+# This script is intended to be source'd, not executed
+
+REPO_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+WORK_DIR=`mktemp -d`
+cd ${WORK_DIR}
+cmake ${REPO_DIR}/extern/fabm/src/drivers/python -DFABM_INSTITUTES="gotm;ersem" -DFABM_ERSEM_BASE=${REPO_DIR}/extern/ersem
+make install
+cd -
+rm -rf ${WORK_DIR}
+
+WORK_DIR=`mktemp -d`
+cd ${WORK_DIR}
+cmake ${REPO_DIR}/extern/gotm -DFABM_INSTITUTES="gotm;ersem" -DFABM_ERSEM_BASE=${REPO_DIR}/extern/ersem
+make
+cp gotm ~/.local/bin/
+cd -
+rm -rf ${WORK_DIR}

@@ -1,0 +1,6 @@
+[submodule "extern/gotm"]
+	path = extern/gotm
+	url = ../../gotm-model/code.git
+[submodule "extern/ersem"]
+	path = extern/ersem
+	url = ../../pmlmodelling/ersem.git

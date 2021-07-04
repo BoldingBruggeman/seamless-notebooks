@@ -1,0 +1,17 @@
+name: seamless
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - fortran-compiler
+  - netcdf-fortran
+  - jupyterlab
+  - cmake
+  - numpy
+  - matplotlib
+  - scipy
+  - ipympl
+  - netcdf4
+  - pyyaml
+  - pip:
+      - parsac
