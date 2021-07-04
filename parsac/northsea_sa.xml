@@ -3,7 +3,7 @@
   <transports>
     <transport type="sqlite" path="northsea_sa.db"/>
   </transports>
-  <executable path="gotm"/>
+  <executable path="gotm" shell="True"/>
   <setup path="../setups/northsea"/>
   <parameters>
     <parameter file="gotm.yaml" variable="turbulence/turb_param/k_min" minimum="1e-6" maximum="1e-5" logscale="True" />
