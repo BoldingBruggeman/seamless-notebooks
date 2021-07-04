@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../client/config.xsd">
+  <transports>
+    <transport type="sqlite" path="northsea_sa.db"/>
+  </transports>
+  <executable path="gotm"/>
+  <setup path="../setups/northsea"/>
+  <parameters>
+    <parameter file="gotm.yaml" variable="turbulence/turb_param/k_min" minimum="1e-6" maximum="1e-5" logscale="True" />
+    <parameter file="fabm.yaml" variable="instances/P1/parameters/phim" minimum="0.042" maximum="0.078" />
+    <parameter file="fabm.yaml" variable="instances/P2/parameters/phim" minimum=" 0.0175" maximum="0.0325" />
+    <parameter file="fabm.yaml" variable="instances/P3/parameters/phim" minimum="0.0105" maximum="0.0195" />
+    <parameter file="fabm.yaml" variable="instances/P4/parameters/phim" minimum="0.0315" maximum="0.0585" />
+  </parameters>
+  <targets>
+    <target expression="(total_chlorophyll_calculator_result[:,:,:,:]).mean()" path="result.nc"/>
+    <target expression="(total_chlorophyll_calculator_result[:,:,:,:]).min()" path="result.nc"/>
+    <target expression="(total_chlorophyll_calculator_result[:,:,:,:]).max()" path="result.nc"/>
+  </targets>
+</config>
