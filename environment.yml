@@ -1,4 +1,4 @@
-name: seamless
+name: seamless-bb
 channels:
   - conda-forge
 dependencies:
