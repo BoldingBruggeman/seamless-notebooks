@@ -18,6 +18,12 @@ First load required modules (you can put this in your `~/.bashrc` so you do not 
 module load anaconda3
 ```
 
+Now initialize your conda environment. This needs to be done only once, as it adds its settings to your `~/.bashrc`.
+
+```
+conda init bash
+```
+
 Now obtain the repository with setups and scripts:
 
 ```
