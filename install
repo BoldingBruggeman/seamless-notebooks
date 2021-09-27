@@ -4,15 +4,15 @@ REPO_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 WORK_DIR=`mktemp -d`
 cd ${WORK_DIR}
-cmake ${REPO_DIR}/extern/fabm/src/drivers/python -DFABM_INSTITUTES="gotm;ersem" -DFABM_ERSEM_BASE=${REPO_DIR}/extern/ersem
+cmake ${REPO_DIR}/extern/fabm/src/drivers/python -DFABM_INSTITUTES="gotm;ersem;pisces" -DFABM_ERSEM_BASE=${REPO_DIR}/extern/ersem -DFABM_PISCES_BASE=${REPO_DIR}/extern/pisces -DCMAKE_Fortran_COMPILER=gfortran
 make install
 cd -
 rm -rf ${WORK_DIR}
 
 WORK_DIR=`mktemp -d`
 cd ${WORK_DIR}
-cmake ${REPO_DIR}/extern/gotm -DFABM_INSTITUTES="gotm;ersem" -DFABM_ERSEM_BASE=${REPO_DIR}/extern/ersem
+cmake ${REPO_DIR}/extern/gotm -DFABM_INSTITUTES="gotm;ersem;pisces" -DFABM_ERSEM_BASE=${REPO_DIR}/extern/ersem -DFABM_PISCES_BASE=${REPO_DIR}/extern/pisces -DCMAKE_Fortran_COMPILER=gfortran
 make
-cp gotm ~/.local/bin/
+cp -v gotm ~/.local/bin/
 cd -
 rm -rf ${WORK_DIR}

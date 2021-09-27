@@ -7,3 +7,6 @@
 [submodule "extern/fabm"]
 	path = extern/fabm
 	url = ../../fabm-model/fabm.git
+[submodule "extern/pisces"]
+	path = extern/pisces
+	url = ../fabm-pisces.git
