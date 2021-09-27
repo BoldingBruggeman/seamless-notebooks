@@ -7,7 +7,7 @@
   <setup path="../setups/northsea"/>
   <parameters>
     <parameter file="fabm.yaml" variable="instances/P1/parameters/phim" minimum="0.042" maximum="0.078" />
-    <parameter file="fabm.yaml" variable="instances/P2/parameters/phim" minimum=" 0.0175" maximum="0.0325" />
+    <parameter file="fabm.yaml" variable="instances/P2/parameters/phim" minimum="0.0175" maximum="0.0325" />
     <parameter file="fabm.yaml" variable="instances/P3/parameters/phim" minimum="0.0105" maximum="0.0195" />
     <parameter file="fabm.yaml" variable="instances/P4/parameters/phim" minimum="0.0315" maximum="0.0585" />
   </parameters>
