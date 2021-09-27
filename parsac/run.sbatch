@@ -17,7 +17,7 @@ secret=`cat /dev/urandom | tr -cd 'a-f0-9' | head -c 32`
 port=`python -c 'import random; print(random.randint(49152,65535))'`
 
 # run the servers
-srun --output %j-%3t.out --error %j-%3t.err ppserver.py -w $SLURM_CPUS_PER_TASK -t 3600 -s $secret -p $port -r &
+srun --output %j-%3t.out --error %j-%3t.err ppserver -w $SLURM_CPUS_PER_TASK -t 3600 -s $secret -p $port -r &
 
 # launch the parsac job
 parsac sensitivity run --ppservers $SLURM_JOB_NODELIST:$port --ncpus 0 --secret=$secret northsea_sa.pickle
