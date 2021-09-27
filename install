@@ -11,7 +11,7 @@ rm -rf ${WORK_DIR}
 
 WORK_DIR=`mktemp -d`
 cd ${WORK_DIR}
-cmake ${REPO_DIR}/extern/gotm -DFABM_INSTITUTES="gotm;ersem;pisces" -DFABM_ERSEM_BASE=${REPO_DIR}/extern/ersem -DFABM_PISCES_BASE=${REPO_DIR}/extern/pisces -DCMAKE_Fortran_COMPILER=gfortran
+cmake ${REPO_DIR}/extern/gotm -DFABM_BASE=${REPO_DIR}/extern/fabm -DFABM_INSTITUTES="gotm;ersem;pisces" -DFABM_ERSEM_BASE=${REPO_DIR}/extern/ersem -DFABM_PISCES_BASE=${REPO_DIR}/extern/pisces -DCMAKE_Fortran_COMPILER=gfortran
 make
 cp -v gotm ~/.local/bin/
 cd -
