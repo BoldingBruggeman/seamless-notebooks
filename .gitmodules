@@ -10,3 +10,6 @@
 [submodule "extern/pisces"]
 	path = extern/pisces
 	url = ../fabm-pisces.git
+[submodule "extern/parsac"]
+	path = extern/parsac
+	url = ../parsac.git
