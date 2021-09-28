@@ -9,6 +9,7 @@
 #SBATCH --error=%j.err
 
 conda activate seamless-bb
+export PYTHONUNBUFFERED=TRUE
 
 # Generate secret for Parallel Python authentication between server and client
 secret=`cat /dev/urandom | tr -cd 'a-f0-9' | head -c 32`
