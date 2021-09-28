@@ -1,7 +1,7 @@
 # This script is intended to be source'd, not executed
 
 # Add additional FABM "institutes" (bfm, ecosmo, etc.) and their base directory on the line below.
-FABM_ARGS=-DFABM_INSTITUTES="gotm;msi;ersem;pisces" -DFABM_ERSEM_BASE=${REPO_DIR}/extern/ersem -DFABM_PISCES_BASE=${REPO_DIR}/extern/pisces -DCMAKE_Fortran_COMPILER=gfortran
+FABM_ARGS="-DFABM_INSTITUTES=\"gotm;msi;ersem;pisces\" -DFABM_ERSEM_BASE=${REPO_DIR}/extern/ersem -DFABM_PISCES_BASE=${REPO_DIR}/extern/pisces -DCMAKE_Fortran_COMPILER=gfortran"
 
 REPO_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
