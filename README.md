@@ -38,15 +38,15 @@ Depending on the changes in the repository, they may not be needed, but there is
 
 # Running a parallel sensitivity analysis
 
-An example for a simple sensitivity analysis with GOTM-ERSEM for a Northern North Sea station is provided. To use this, first go to the `seamless-notebooks/parsac` directory.
-
-First, initialize your Pyton environment with:
+First, initialize your Python environment with:
 
 ```
 conda activate seamless-bb
 ```
 
 This needs to be done anytime you want to use parsac; you could add it to your `~/.bashrc`.
+
+An example for a simple sensitivity analysis with GOTM-ERSEM for a Northern North Sea station is provided. To use this, first go to the `seamless-notebooks/parsac` directory.
 
 To sample across parameter space, use:
 
