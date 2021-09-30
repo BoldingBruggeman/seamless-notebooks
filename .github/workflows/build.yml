@@ -13,13 +13,19 @@ jobs:
         with:
            submodules: recursive
       - name: Install conda environment
-        shell: bash -l {0}
         run: |
           conda env create -f environment.yml
           conda init bash
       - name: Compile
-        shell: bash -l {0}
         run: |
           source ${CONDA}/etc/profile.d/conda.sh
           conda activate seamless-bb
           source ./install
+      - name: Run parsac
+        run: |
+          source ${CONDA}/etc/profile.d/conda.sh
+          conda activate seamless-bb
+          cd parsac
+          parsac sensitivity sample northsea_sa.xml northsea_sa.pickle saltelli 4
+          parsac sensitivity run --ncpus 2 northsea_sa.pickle
+          parsac sensitivity analyze northsea_sa.pickle sobol
