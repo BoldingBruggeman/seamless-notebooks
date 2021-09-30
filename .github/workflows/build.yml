@@ -12,9 +12,11 @@ jobs:
         uses: actions/checkout@v2
         with:
            submodules: recursive
-      - name: Build
+      - name: Install conda environment
         run: |
           conda env create -f environment.yml
           conda init bash
+      - name: Compile
+        run: |
           conda activate seamless-bb
           bash ./install
