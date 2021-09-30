@@ -11,6 +11,7 @@ conda init bash
 ```
 
 This needs to be done just once, as it modifies your `.bashrc` that is sourced every time you login.
+After this, restart your shell by logging out and back in.
 
 Now obtain the repository with setups and scripts:
 
@@ -38,6 +39,14 @@ Depending on the changes in the repository, they may not be needed, but there is
 # Running a parallel sensitivity analysis
 
 An example for a simple sensitivity analysis with GOTM-ERSEM for a Northern North Sea station is provided. To use this, first go to the `seamless-notebooks/parsac` directory.
+
+First, initialize your Pyton environment with:
+
+```
+conda activate seamless-bb
+```
+
+This needs to be done anytime you want to use parsac; you could add it to your `~/.bashrc`.
 
 To sample across parameter space, use:
 
