@@ -1,3 +1,4 @@
 *.nc
 /setups/L4/*.exe
 *.pickle
+*.ppjob
