@@ -21,6 +21,16 @@ jobs:
           source ${CONDA}/etc/profile.d/conda.sh
           conda activate seamless-bb
           source ./install
+      - name: Run GOTM
+        run: |
+          source ${CONDA}/etc/profile.d/conda.sh
+          conda activate seamless-bb
+          cd setups/bats
+          gotm
+          cd ../L4
+          gotm
+          cd ../northsea
+          gotm
       - name: Run parsac
         run: |
           source ${CONDA}/etc/profile.d/conda.sh
