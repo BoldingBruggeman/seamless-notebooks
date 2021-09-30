@@ -5,7 +5,7 @@ set -e
 REPO_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Add additional FABM "institutes" (bfm, ecosmo, etc.) and their base directory on the line below.
-FABM_ARGS="-DFABM_INSTITUTES=gotm;msi;ersem;pisces;nersc -DFABM_ERSEM_BASE=${REPO_DIR}/extern/ersem -DFABM_PISCES_BASE=${REPO_DIR}/extern/pisces -DFABM_NERSC_BASE=${REPO_DIR}/extern/nersc -DCMAKE_Fortran_COMPILER=gfortran"
+FABM_ARGS="-DFABM_INSTITUTES=gotm;msi;ersem;pisces;nersc -DFABM_ERSEM_BASE=${REPO_DIR}/extern/ersem -DFABM_PISCES_BASE=${REPO_DIR}/extern/pisces -DFABM_NERSC_BASE=${REPO_DIR}/extern/ecosmo -DCMAKE_Fortran_COMPILER=gfortran"
 
 # Build pyfabm
 WORK_DIR=`mktemp -d`
