@@ -13,12 +13,12 @@ jobs:
         with:
            submodules: recursive
       - name: Install conda environment
-        shell: bash {0}
+        shell: bash -l {0}
         run: |
           conda env create -f environment.yml
           conda init bash
       - name: Compile
-        shell: bash {0}
+        shell: bash -l {0}
         run: |
           conda activate seamless-bb
           bash ./install
