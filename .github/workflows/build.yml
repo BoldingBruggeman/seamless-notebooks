@@ -14,10 +14,7 @@ jobs:
            submodules: recursive
       - name: Install conda environment
         run: |
-          conda env create -f environment.yml
-          conda init bash
+          conda env update -f environment.yml --name base
       - name: Compile
         run: |
-          source ~/.bashrc
-          conda activate seamless-bb
-          bash ./install
+          source ./install
