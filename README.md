@@ -1,7 +1,3 @@
-You can use the Jupyter Notebooks in this repository with Binder:
-
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/BoldingBruggeman/seamless-notebooks/HEAD?urlpath=lab%2Ftree%2Fsetups)
-
 # Installing
 
 You will need the [Anaconda Python distribution](https://www.anaconda.com/products/individual). On many systems that is already installed: try running `conda --version`.
@@ -83,3 +79,9 @@ module load anaconda3
 ```
 
 The job scheduler is SLURM, as assumed in the above example.
+
+# Try this online
+
+You can use the code and Jupyter Notebooks in this repository with Binder:
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/BoldingBruggeman/seamless-notebooks/HEAD?urlpath=lab%2Ftree%2Fsetups)
