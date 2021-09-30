@@ -1,0 +1,15 @@
+name: Build
+on: push
+jobs:
+   main:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install Python dependencies
+        run: |
+          conda env create -f environment.yml
+          conda activate seamless-bb
+          bash ./install
