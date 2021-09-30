@@ -18,5 +18,6 @@ jobs:
           conda init bash
       - name: Compile
         run: |
+          source ~/.bashrc
           conda activate seamless-bb
           bash ./install
