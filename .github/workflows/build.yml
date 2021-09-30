@@ -20,5 +20,6 @@ jobs:
       - name: Compile
         shell: bash -l {0}
         run: |
+          source ${CONDA}/etc/profile.d/conda.sh
           conda activate seamless-bb
-          bash ./install
+          source ./install
