@@ -13,6 +13,10 @@ conda init bash
 This needs to be done just once, as it modifies your `.bashrc` that is sourced every time you login.
 After this, restart your shell by logging out and back in.
 
+*If `conda init bash` asks you for your password (it tries to do "sudo"), it is likely because the permissions on your `~/.bashrc` file are incorrect.*
+In that case, contact your system administrator to have these permissions corrected.
+You may in the meantime be able to continue these instructions by executing `eval "$(conda shell.bash hook)"` - but this then needs to be done every time your login.
+
 Now obtain the repository with setups and scripts:
 
 ```
