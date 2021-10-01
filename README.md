@@ -37,7 +37,7 @@ conda env update -f environment.yml
 bash ./install
 ```
 
-The last two commands update the conda (Python) environment and GOTM + pyfabm, respectively.
+The last two commands update the conda (Python) environment and GOTM-FABM, respectively.
 Depending on the changes in the repository, they may not be needed, but there is no harm in running them just in case - it just takes a little longer.
 
 # Running a parallel sensitivity analysis
