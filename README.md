@@ -87,19 +87,19 @@ To customize this for your own application:
 
 When you start from an existing setup, you will need to customize it for your biogeochemical model of choice:
 
-First, copy the `fabm.yaml` for you biogeochemcial model into the GOTM setup directory
+First, copy the `fabm.yaml` for you biogeochemical model into the GOTM setup directory
 Now add initial conditions for the spin-up simulation. This must be done in the `gotm.yaml` file, section `fabm/input`. There you need to add an entry for every biogeochemical variable for which you want to prescribe an initial profile. Such a section looks like this:
 
 ```
     <VARIABLENAME>:​
       method: file​
       file: <PATH>​
-      column: 1                     # optional, defaults to 1 
-      scale_factor: <SCALE_FACTOR>  # optional​
-      relax_tau: <RELAX_TAU>        # optional​
+      column: 1                     # column in the data file, optional, defaults to 1 
+      scale_factor: <SCALE_FACTOR>  # scale factor to apply to data from file, optional​
+      relax_tau: <RELAX_TAU>        # relaxation time scale in seconds, optional​
 ```
 
-* `<VARIABLENAME>` is the name of the variable in your biogeochemical model for which you want to prescribe initial conditions. `<PATH>` must be set to the file with the initial profile(s).
+* `<VARIABLENAME>` is the name of the state variable in your biogeochemical model for which you want to prescribe initial conditions. `<PATH>` must be set to the file with the initial profile(s).
 * `<SCALE_FACTOR>` is the factor with whihc the profiles in the data file need to be multiplied to arrive at the units used by the model. For instance, if observations are in mmol carbon but the model uses mg carbon, you will put a value of 12 (approximately) for `<SCALE_FACTOR>`. If the units of the data file and the model happen to match, use a `<SCALE_FACTOR>` of 1. 
 * `<RELAX_TAU>` is the time scale for nudging model results: a source term `(y_obs - y) / <RELAX_TAU>` will be added to the variable (use a value of 1e15 for `<RELAX_TAU` to disable nudging)
 
