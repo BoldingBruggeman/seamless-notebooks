@@ -241,7 +241,7 @@ fabm:                               # Framework for Aquatic Biogeochemical Model
       shade: false                  # interior light absorption [default=false]
       albedo: false                 # surface albedo [default=false]
       surface_drag: false           # surface drag [default=false]
-   repair_state: false              # clip state to minimum/maximum boundaries [default=false]
+   repair_state: true              # clip state to minimum/maximum boundaries [default=false]
    input:
       mole_fraction_of_carbon_dioxide_in_air: 414.
       absorption_of_silt: 0.07
