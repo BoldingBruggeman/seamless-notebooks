@@ -110,6 +110,8 @@ Now add initial conditions for the spin-up simulation. This must be done in the 
 
 For the spin-up simulation, we recommend using nudging on an annual time scale (`<RELAX_TAU` = 3.15e7).
 
+You should apply similar relaxation to your physical tracers: `temperature/relax/tau` and `salinity/relax/tau` in `gotm.yaml`.
+
 ## Additional GOTM settings
 
 * Make sure FABM is active: in `gotm.yaml`, set `fabm/use` to `true`.
