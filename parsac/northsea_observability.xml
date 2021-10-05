@@ -13,7 +13,7 @@
   </functions>
   <targets>
     <target name="tropic_level" expression="(((Z4_c+Z5_c+Z6_c)*h).mean(axis=1).mean(axis=0)/((P1_c+P2_c+P3_c+P4_c)*h).mean(axis=1).mean(axis=0))" path="result.nc"/>
-    <target name="chl_max_in_10m" expression="((P1_Chl+P2_Chl+P3_Chl+P4_Chl)*h)[:,55:].sum(axis=1)/h[:,55:].sum(axis=1).max()" path="result.nc"/>
+    <target name="chl_max_in_10m" expression="(((P1_Chl+P2_Chl+P3_Chl+P4_Chl)*h)[:,55:].sum(axis=1)/h[:,55:].sum(axis=1)).max()" path="result.nc"/>
     <target name="time_of_max_chl_in_10m" expression="((P1_Chl+P2_Chl+P3_Chl+P4_Chl)*h)[:,55:].mean(axis=1).argmax()" path="result.nc"/>
     <target name="chl_90perc_in_10m" expression="percentile(((P1_Chl+P2_Chl+P3_Chl+P4_Chl)*h)[:,55:].sum(axis=1)/h[:,55:].sum(axis=1), 90)" path="result.nc"/>
   </targets>
