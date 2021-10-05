@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../client/config.xsd">
+  <transports>
+    <transport type="sqlite" path="northsea_sa.db"/>
+  </transports>
+  <executable path="gotm" shell="True"/>
+  <setup path="../setups/northsea" exclude_files=""/>
+  <parameters>
+    <parameter name="scaleprof" minimum=".7" maximum="1.3" />
+  </parameters>
+  <functions>
+    <function class="parsac.job.gotm.ChangeRestart" variable="P?_*" expression="variable*scaleprof" maxdepth="20"/>
+  </functions>
+  <targets>
+    <target name="tropic_level" expression="(((Z4_c+Z5_c+Z6_c)*h).mean(axis=1).mean(axis=0)/((P1_c+P2_c+P3_c+P4_c)*h).mean(axis=1).mean(axis=0))" path="result.nc"/>
+    <target name="chl_max_in_10m" expression="((P1_Chl+P2_Chl+P3_Chl+P4_Chl)*h)[:,55:].sum(axis=1)/h[:,55:].sum(axis=1).max()" path="result.nc"/>
+    <target name="time_of_max_chl_in_10m" expression="((P1_Chl+P2_Chl+P3_Chl+P4_Chl)*h)[:,55:].mean(axis=1).argmax()" path="result.nc"/>
+    <target name="chl_90perc_in_10m" expression="percentile(((P1_Chl+P2_Chl+P3_Chl+P4_Chl)*h)[:,55:].sum(axis=1)/h[:,55:].sum(axis=1), 90)" path="result.nc"/>
+  </targets>
+</config>
