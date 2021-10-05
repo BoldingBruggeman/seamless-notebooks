@@ -83,6 +83,28 @@ To customize this for your own application:
 * The parameter sampling method is *not* set in the xml file, but on the command line as part of the `sample` step. For instance, in the above example `parsac sensitivity sample northsea_sa.xml northsea_sa.pickle saltelli 64` specifies the Saltelli sampling method. To get an overview of available methods, use `parsac sensitivity sample -h`. The methods corresponds to those provided by [SALib](https://salib.readthedocs.io/en/latest/index.html). Most will have additional settings that you can see with `parsac sensitivity sample <XMLFILE> <PICKLEFILE> <METHOD> -h`, for instance, `parsac sensitivity sample northsea_sa.xml northsea_sa.pickle saltelli -h`. For more information about each setting, see [the SALib documentation](https://salib.readthedocs.io/en/latest/api.html).
 * Likewise, the analysis method is specified on the command line as part of the `analyze` step. To see available methods, use `parsac sensitivity analyze -h`. As for the `sample` step, an analysis step may have additional arguments that you can see with `parsac sensitivity analyze <PICKLEFILE> <METHOD> -h`. *Note:* in most cases, a particular analysis method needs to be combined with a specific sampling method, e.g., [sampling with saltelli, analysis with sobol](https://salib.readthedocs.io/en/latest/api.html#sobol-sensitivity-analysis), or [sample with morris, analyze with morris](https://salib.readthedocs.io/en/latest/api.html#method-of-morris). See [the SALib documentation](https://salib.readthedocs.io/en/latest/api.html).
 
+# Configuring GOTM
+
+When you start from an existing setup, you will need to customize it for your biogeochemical model of choice:
+
+First, copy the `fabm.yaml` for you biogeochemcial model into the GOTM setup directory
+Now add initial conditions for the spin-up simulation. This must be done in the `gotm.yaml` file, section `fabm/input`. There you need to add an entry for every biogeochemical variable for which you want to prescribe an initial profile. Such a section looks like this:
+
+```
+    <VARIABLENAME>:​
+      method: file​
+      file: <PATH>​
+      column: 1                     # optional, defaults to 1 
+      scale_factor: <SCALE_FACTOR>  # optional​
+      relax_tau: <RELAX_TAU>        # optional​
+```
+
+* `<VARIABLENAME>` is the name of the variable in your biogeochemical model for which you want to prescribe initial conditions. `<PATH>` must be set to the file with the initial profile(s).
+* `<SCALE_FACTOR>` is the factor with whihc the profiles in the data file need to be multiplied to arrive at the units used by the model. For instance, if observations are in mmol carbon but the model uses mg carbon, you will put a value of 12 (approximately) for `<SCALE_FACTOR>`. If the units of the data file and the model happen to match, use a `<SCALE_FACTOR>` of 1. 
+* `<RELAX_TAU>` is the time scale for nudging model results: a source term `(y_obs - y) / <RELAX_TAU>` will be added to the variable (use a value of 1e15 for `<RELAX_TAU` to disable nudging)
+
+For the spin-up simulation, we recommend using nudging on an annual time scale (`<RELAX_TAU` = 3.15e7).
+
 # Running on CINECA
 
 The Anaconda Python distribution is already installed and can be loaded with:
