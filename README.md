@@ -87,7 +87,12 @@ To customize this for your own application:
 
 When you start from an existing setup, you will need to customize it for your biogeochemical model of choice:
 
-First, copy the `fabm.yaml` for you biogeochemical model into the GOTM setup directory
+## Biogeochemical configuration
+
+First, copy the `fabm.yaml` for you biogeochemical model into the GOTM setup directory.
+
+## Initial conditions
+
 Now add initial conditions for the spin-up simulation. This must be done in the `gotm.yaml` file, section `fabm/input`. There you need to add an entry for every biogeochemical variable for which you want to prescribe an initial profile. Such a section looks like this:
 
 ```
@@ -104,6 +109,13 @@ Now add initial conditions for the spin-up simulation. This must be done in the 
 * `<RELAX_TAU>` is the time scale for nudging model results: a source term `(y_obs - y) / <RELAX_TAU>` will be added to the variable (use a value of 1e15 for `<RELAX_TAU` to disable nudging)
 
 For the spin-up simulation, we recommend using nudging on an annual time scale (`<RELAX_TAU` = 3.15e7).
+
+## Additional GOTM settings
+
+* Make sure FABM is active: in `gotm.yaml`, set `fabm/use` to `true`.
+* Check the model time step (`time/dt` in `gotm.yaml`): a value to use for biogeochemistry is 600 s.
+* Allow GOTM to repair (clip) the model state if values go out of bounds: set `fabm/repair_state` in `gotm.yaml` to `true`.
+* Make sure all model outputs of interest are saved. The easiest way to achieve this is by making sure there is one entry (file) in the `output` section of `gotm.yaml` that includes all variables. That means it has `- source: /*` listed under `variables`.
 
 # Running on CINECA
 
