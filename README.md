@@ -134,6 +134,12 @@ Run:
 sbatch run_observability.sbatch
 ```
 
+Investigate spread across the ensemble with the `analyze_observability.py` in the parsac directory:
+
+```
+python analyze_observability northsea_observability.pickle result.nc <VARIABLE>
+```
+
 Analysis:
 
 ```
@@ -141,7 +147,6 @@ parsac sensitivity analyze northsea_observability.pickle
 ```
 
 The metric we use is the coefficient of variation of output [indicators], divided by coefficient of variation of input [observable].
-
 
 # Running on CINECA
 
