@@ -137,7 +137,8 @@ sbatch run_observability.sbatch
 Investigate spread across the ensemble with the `analyze_observability.py` in the `parsac` directory:
 
 ```
-python analyze_observability.py northsea_observability.pickle result.nc <VARIABLE>
+python analyze_observability.py northsea_observability.pickle result.nc <VARIABLE>            # for a Hovmuller plot (time/depth) of the cv
+python analyze_observability.py northsea_observability.pickle result.nc <VARIABLE> --depth 0  # for a timeseries of spread at depth 0 m
 ```
 
 Analysis:
