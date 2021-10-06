@@ -32,6 +32,7 @@ bash ./install
 To update this repository *including its submodules (FABM, ERSEM, PISCES, etc.)*, make sure you are in the `seamless-notebooks` directory and execute:
 
 ```
+conda activate seamless-bb
 git pull --recurse-submodules
 conda env update -f environment.yml
 bash ./install
@@ -118,6 +119,29 @@ You should apply similar relaxation to your physical tracers: `temperature/relax
 * Check the model time step (`time/dt` in `gotm.yaml`): a value to use for biogeochemistry is 600 s.
 * Allow GOTM to repair (clip) the model state if values go out of bounds: set `fabm/repair_state` in `gotm.yaml` to `true`.
 * Make sure all model outputs of interest are saved. The easiest way to achieve this is by making sure there is one entry (file) in the `output` section of `gotm.yaml` that includes all variables. That means it has `- source: /*` listed under `variables`.
+
+# Observability experiments
+
+Sampling: random from univariate distribution with ensemble size 100:
+
+```
+parsac sensitivity sample random northsea_observability.xml northsea_observability.pickle --dir /g100_work/tra21_seamless/<MODEL>/<EXP> random 100
+```
+
+Run:
+
+```
+sbatch run_observability.sbatch
+```
+
+Analysis:
+
+```
+parsac sensitivity analyze northsea_observability.pickle
+```
+
+The metric we use is the coefficient of variation of output [indicators], divided by coefficient of variation of input [observable].
+
 
 # Running on CINECA
 
