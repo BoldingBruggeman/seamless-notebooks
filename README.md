@@ -134,7 +134,7 @@ Run:
 sbatch run_observability.sbatch
 ```
 
-Investigate spread across the ensemble with the `analyze_observability.py` in the parsac directory:
+Investigate spread across the ensemble with the `analyze_observability.py` in the `parsac` directory:
 
 ```
 python analyze_observability.py northsea_observability.pickle result.nc <VARIABLE>
