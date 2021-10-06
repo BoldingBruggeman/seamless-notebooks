@@ -128,7 +128,9 @@ Sampling: random from univariate distribution with ensemble size 100:
 parsac sensitivity sample random northsea_observability.xml northsea_observability.pickle --dir /g100_work/tra21_seamless/<MODEL>/<EXP> random 100
 ```
 
-Run:
+For `<MODEL>` we recommend the name of the biogeochemical model (ERGOM, ERSEM, BFM, ECOSMO, PISCES). `EXP>` is the name of the experiment, for instance, to indicate which observable was perturbed (OBS1, OBS2, etc.)
+
+Run GOTM in parallel:
 
 ```
 sbatch run_observability.sbatch
