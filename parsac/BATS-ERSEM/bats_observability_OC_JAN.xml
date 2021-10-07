@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../client/config.xsd">
+  <transports>
+    <transport type="sqlite" path="bats_init_sa.db"/>
+  </transports>
+  <executable path="gotm" shell="True"/>
+  <setup path="." exclude_files="" exclude_dirs=""/>
+  <parameters>
+    <parameter name="scaleprof" minimum=".7" maximum="1.3" />
+  </parameters>
+  <functions>
+    <function class="parsac.job.gotm.ChangeRestart" variable="P?_*" expression="variable*scaleprof" maxdepth="100"/>
+  </functions>
+  <targets>
+    <!--examples below are for ERSEM-->
+    <target name="non-living_particulate_organic_carbon" expression="(((R4_c+R6_c+R8_c)*h)[:,145:].sum(axis=1)/h[:,145:].sum(axis=1)).mean(axis=0)" path="result.nc"/>
+    <target name="trophic_efficiency" expression="((P1_c+P2_c+P3_c+P4_c)*h)[:,145:].sum(axis=1).mean(axis=0)/((Z4_c+Z5_c+Z6_c)*h)[:,145:].sum(axis=1).mean(axis=0)" path="result.nc"/>
+    <target name="net_primary_production" expression="((P1_netPI+P2_netPI+P3_netPI+P4_netPI)*h)[:,145:].sum(axis=1).mean(axis=0)" path="result.nc"/>
+    <target name="pH" expression="(((O3_pH)*h)[:,145:].sum(axis=1)/h[:,145:].sum(axis=1)).mean(axis=0)" path="result.nc"/>
+    <target name="O2" expression="(((O2_o)*h)[:,145:160].sum(axis=1)/h[:,145:160].sum(axis=1)).mean(axis=0)" path="result.nc"/>
+    <target name="large_over_all_phytoplankton" expression="((P1_c+P4_c)*h)[:,145:].sum(axis=1).mean(axis=0)/((P1_c+P2_c+P3_c+P4_c)*h)[:,145:].sum(axis=1).mean(axis=0)" path="result.nc"/>
+    <target name="chl_max_in_5m" expression="( cumsum (((P1_Chl+P2_Chl+P3_Chl+P4_Chl)*h)[:,199:].sum(axis=1)/h[:,199:].sum(axis=1)) [3:]/3.  - cumsum (((P1_Chl+P2_Chl+P3_Chl+P4_Chl)*h)[:,199:].sum(axis=1)/h[:,199:].sum(axis=1)) [:-3]/3. ).max(axis=0)" path="result.nc"/>
+    <target name="chl_max_in_10m_to_150m" expression="(P1_Chl+P2_Chl+P3_Chl+P4_Chl)[:,152:192].mean(axis=0).max(axis=0)" path="result.nc"/>
+    <target name="timing_of_chl_max_in_5m" expression="( cumsum (((P1_Chl+P2_Chl+P3_Chl+P4_Chl)*h)[:,199:].sum(axis=1)/h[:,199:].sum(axis=1)) [3:]/3.  - cumsum (((P1_Chl+P2_Chl+P3_Chl+P4_Chl)*h)[:,199:].sum(axis=1)/h[:,199:].sum(axis=1)) [:-3]/3. ).argmax(axis=0)" path="result.nc"/>
+    <target name="depth_of_chl_max_in_10m_to_150m" expression="(P1_Chl+P2_Chl+P3_Chl+P4_Chl)[:,152:192].mean(axis=0).argmax(axis=0)" path="result.nc"/>
+  </targets>
+</config>

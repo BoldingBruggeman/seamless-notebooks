@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../client/config.xsd">
+  <transports>
+    <transport type="sqlite" path="bats_init_sa.db"/>
+  </transports>
+  <executable path="gotm" shell="True"/>
+  <setup path="." exclude_files="" exclude_dirs=""/>
+  <parameters>
+<parameter file="fabm.yaml" variable="instances/light/parameters/a0w" minimum="0.020999999999999998" maximum="0.039" />
+<parameter file="fabm.yaml" variable="instances/light/parameters/b0w" minimum="0.00105" maximum="0.0019500000000000001" />
+<parameter file="fabm.yaml" variable="instances/light/parameters/pEIR_eow" minimum="0.35" maximum="0.65" />
+<parameter file="fabm.yaml" variable="instances/N1/parameters/c0" minimum="0.0007" maximum="0.0013000000000000002" />
+<parameter file="fabm.yaml" variable="instances/N3/parameters/c0" minimum="0.0007" maximum="0.0013000000000000002" />
+<parameter file="fabm.yaml" variable="instances/N4/parameters/c0" minimum="0.0007" maximum="0.0013000000000000002" />
+<parameter file="fabm.yaml" variable="instances/N5/parameters/s0" minimum="0.00020999999999999998" maximum="0.00039" />
+<!-- <parameter file="fabm.yaml" variable="instances/O2/parameters/ISWO2" minimum="1.4" maximum="2.6" /> -->
+<!-- <parameter file="fabm.yaml" variable="instances/O3/parameters/iswCO2" minimum="0.7" maximum="1.3" /> -->
+<!-- <parameter file="fabm.yaml" variable="instances/O3/parameters/iswASFLUX" minimum="0.7" maximum="1.3" /> -->
+<!-- <parameter file="fabm.yaml" variable="instances/O3/parameters/iswtalk" minimum="1.4" maximum="2.6" /> -->
+<!-- <parameter file="fabm.yaml" variable="instances/O3/parameters/pHscale" minimum="0.7" maximum="1.3" /> -->
+<!-- <parameter file="fabm.yaml" variable="instances/O3/parameters/iswbioalk" minimum="0.7" maximum="1.3" /> -->
+<parameter file="fabm.yaml" variable="instances/R1/parameters/c0" minimum="0.0023799999999999997" maximum="0.00442" />
+<parameter file="fabm.yaml" variable="instances/R2/parameters/c0" minimum="0.00231" maximum="0.00429" />
+<parameter file="fabm.yaml" variable="instances/R3/parameters/c0" minimum="0.00231" maximum="0.00429" />
+<parameter file="fabm.yaml" variable="instances/R4/parameters/c0" minimum="0.00231" maximum="0.00429" />
+<parameter file="fabm.yaml" variable="instances/R4/parameters/iopBBS" minimum="1.12e-05" maximum="2.08e-05" />
+<parameter file="fabm.yaml" variable="instances/R4/parameters/rm" minimum="0.7" maximum="1.3" />
+<!-- <parameter file="fabm.yaml" variable="instances/R4/parameters/ndeposition" minimum="1.4" maximum="2.6" /> -->
+<parameter file="fabm.yaml" variable="instances/R4/parameters/qxc2" minimum="0.06999999999999999" maximum="0.13" />
+<parameter file="fabm.yaml" variable="instances/R4/parameters/qxn2" minimum="0.06999999999999999" maximum="0.13" />
+<parameter file="fabm.yaml" variable="instances/R4/parameters/qxp2" minimum="0.041999999999999996" maximum="0.078" />
+<parameter file="fabm.yaml" variable="instances/R6/parameters/c0" minimum="0.00231" maximum="0.00429" />
+<parameter file="fabm.yaml" variable="instances/R6/parameters/iopBBS" minimum="1.12e-05" maximum="2.08e-05" />
+<parameter file="fabm.yaml" variable="instances/R6/parameters/rm" minimum="3.5" maximum="6.5" />
+<!-- <parameter file="fabm.yaml" variable="instances/R6/parameters/ndeposition" minimum="1.4" maximum="2.6" /> -->
+<parameter file="fabm.yaml" variable="instances/R6/parameters/qxc2" minimum="0.06999999999999999" maximum="0.13" />
+<parameter file="fabm.yaml" variable="instances/R6/parameters/qxn2" minimum="0.06999999999999999" maximum="0.13" />
+<parameter file="fabm.yaml" variable="instances/R6/parameters/qxp2" minimum="0.041999999999999996" maximum="0.078" />
+<parameter file="fabm.yaml" variable="instances/R6/parameters/qxs2" minimum="0.0" maximum="0.0" />
+<parameter file="fabm.yaml" variable="instances/R8/parameters/c0" minimum="0.00231" maximum="0.00429" />
+<parameter file="fabm.yaml" variable="instances/R8/parameters/iopBBS" minimum="1.12e-05" maximum="2.08e-05" />
+<parameter file="fabm.yaml" variable="instances/R8/parameters/rm" minimum="7.0" maximum="13.0" />
+<!-- <parameter file="fabm.yaml" variable="instances/R8/parameters/ndeposition" minimum="1.4" maximum="2.6" /> -->
+<parameter file="fabm.yaml" variable="instances/R8/parameters/qxc2" minimum="0.06999999999999999" maximum="0.13" />
+<parameter file="fabm.yaml" variable="instances/R8/parameters/qxn2" minimum="0.06999999999999999" maximum="0.13" />
+<parameter file="fabm.yaml" variable="instances/R8/parameters/qxp2" minimum="0.041999999999999996" maximum="0.078" />
+<parameter file="fabm.yaml" variable="instances/R8/parameters/qxs2" minimum="0.0" maximum="0.0" />
+<parameter file="fabm.yaml" variable="instances/Q1/parameters/c0" minimum="0.0007" maximum="0.0013000000000000002" />
+<parameter file="fabm.yaml" variable="instances/Q6/parameters/c0" minimum="0.0007" maximum="0.0013000000000000002" />
+<parameter file="fabm.yaml" variable="instances/Q7/parameters/c0" minimum="0.0007" maximum="0.0013000000000000002" />
+<!-- <parameter file="fabm.yaml" variable="instances/B1/parameters/iswBlim" minimum="1.4" maximum="2.6" /> -->
+<parameter file="fabm.yaml" variable="instances/B1/parameters/q10" minimum="1.4" maximum="2.6" />
+<parameter file="fabm.yaml" variable="instances/B1/parameters/chdo" minimum="0.217" maximum="0.403" />
+<parameter file="fabm.yaml" variable="instances/B1/parameters/chn" minimum="0.35" maximum="0.65" />
+<parameter file="fabm.yaml" variable="instances/B1/parameters/chp" minimum="0.06999999999999999" maximum="0.13" />
+<parameter file="fabm.yaml" variable="instances/B1/parameters/sd" minimum="0.034999999999999996" maximum="0.065" />
+<parameter file="fabm.yaml" variable="instances/B1/parameters/sum" minimum="1.54" maximum="2.8600000000000003" />
+<parameter file="fabm.yaml" variable="instances/B1/parameters/pu" minimum="0.42" maximum="0.78" />
+<parameter file="fabm.yaml" variable="instances/B1/parameters/puo" minimum="0.13999999999999999" maximum="0.26" />
+<parameter file="fabm.yaml" variable="instances/B1/parameters/srs" minimum="0.06999999999999999" maximum="0.13" />
+<parameter file="fabm.yaml" variable="instances/B1/parameters/sR1" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/B1/parameters/qpc" minimum="0.00133" maximum="0.00247" />
+<parameter file="fabm.yaml" variable="instances/B1/parameters/qnc" minimum="0.011689999999999999" maximum="0.02171" />
+<parameter file="fabm.yaml" variable="instances/B1/parameters/ur_O2" minimum="0.06999999999999999" maximum="0.13" />
+<parameter file="fabm.yaml" variable="instances/B1/parameters/sR1N1" minimum="0.0" maximum="0.0" />
+<parameter file="fabm.yaml" variable="instances/B1/parameters/sR1N4" minimum="0.0" maximum="0.0" />
+<parameter file="fabm.yaml" variable="instances/B1/parameters/c0" minimum="0.006999999999999999" maximum="0.013000000000000001" />
+<!-- <parameter file="fabm.yaml" variable="instances/B1/parameters/nRP" minimum="2.0999999999999996" maximum="3.9000000000000004" /> -->
+<parameter file="fabm.yaml" variable="instances/B1/parameters/sRP1R1" minimum="0.006999999999999999" maximum="0.013000000000000001" />
+<parameter file="fabm.yaml" variable="instances/B1/parameters/sRP2R1" minimum="0.0017499999999999998" maximum="0.0032500000000000003" />
+<parameter file="fabm.yaml" variable="instances/B1/parameters/sRP3R1" minimum="0.0007" maximum="0.0013000000000000002" />
+<parameter file="fabm.yaml" variable="instances/B1/parameters/rR2" minimum="0.0052499999999999995" maximum="0.00975" />
+<parameter file="fabm.yaml" variable="instances/B1/parameters/rR3" minimum="0.0017499999999999998" maximum="0.0032500000000000003" />
+<parameter file="fabm.yaml" variable="instances/B1/parameters/frR3" minimum="0.21" maximum="0.39" />
+<parameter file="fabm.yaml" variable="instances/pel_nit/parameters/q10" minimum="1.4" maximum="2.6" />
+<!-- <parameter file="fabm.yaml" variable="instances/pel_nit/parameters/ISWph" minimum="0.7" maximum="1.3" /> -->
+<parameter file="fabm.yaml" variable="instances/pel_nit/parameters/sN4N3" minimum="0.35" maximum="0.65" />
+<parameter file="fabm.yaml" variable="instances/pel_nit/parameters/chN3o" minimum="1889.9999999999998" maximum="3510.0" />
+<parameter file="fabm.yaml" variable="instances/pel_nit/parameters/chN4n" minimum="0.35" maximum="0.65" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/sum" minimum="0.9624999999999999" maximum="1.7875" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/q10" minimum="1.4" maximum="2.6" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/srs" minimum="0.027999999999999997" maximum="0.052000000000000005" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/pu_ea" minimum="0.13999999999999999" maximum="0.26" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/pu_ra" minimum="0.13999999999999999" maximum="0.26" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/qnlc" minimum="0.0029399999999999995" maximum="0.00546" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/qplc" minimum="7e-05" maximum="0.00013000000000000002" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/xqcp" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/xqcn" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/xqp" minimum="1.4" maximum="2.6" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/xqn" minimum="0.7525" maximum="1.3975" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/qun3" minimum="0.0017499999999999998" maximum="0.0032500000000000003" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/qun4" minimum="0.0017499999999999998" maximum="0.0032500000000000003" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/qurp" minimum="0.0021" maximum="0.0039000000000000003" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/snplux" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/qsc" minimum="0.00826" maximum="0.01534" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/chs" minimum="0.13999999999999999" maximum="0.26" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/sdo" minimum="0.034999999999999996" maximum="0.065" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/alpha" minimum="2.8" maximum="5.2" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/beta" minimum="0.049" maximum="0.09100000000000001" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/phim" minimum="0.041999999999999996" maximum="0.078" />
+<!-- <parameter file="fabm.yaml" variable="instances/P1/parameters/Limnut" minimum="0.7" maximum="1.3" /> -->
+<parameter file="fabm.yaml" variable="instances/P1/parameters/uB1c_O2" minimum="0.077" maximum="0.14300000000000002" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/urB1_O2" minimum="0.06999999999999999" maximum="0.13" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/iopABS" minimum="0.0049" maximum="0.0091" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/iopBBS" minimum="0.000336" maximum="0.000624" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/c0" minimum="7e-05" maximum="0.00013000000000000002" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/resm" minimum="3.5" maximum="6.5" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/esni" minimum="0.48999999999999994" maximum="0.9099999999999999" />
+<!-- <parameter file="fabm.yaml" variable="instances/P1/parameters/ndeposition" minimum="2.0999999999999996" maximum="3.9000000000000004" /> -->
+<parameter file="fabm.yaml" variable="instances/P1/parameters/qxc2" minimum="0.13999999999999999" maximum="0.26" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/qxc3" minimum="0.0034999999999999996" maximum="0.006500000000000001" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/qxn2" minimum="0.13999999999999999" maximum="0.26" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/qxn3" minimum="0.0034999999999999996" maximum="0.006500000000000001" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/qxp2" minimum="0.16799999999999998" maximum="0.312" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/qxp3" minimum="0.0021" maximum="0.0039000000000000003" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/qxs2" minimum="0.0" maximum="0.0" />
+<parameter file="fabm.yaml" variable="instances/P1/parameters/qxs3" minimum="0.0" maximum="0.0" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/sum" minimum="1.1375" maximum="2.1125000000000003" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/q10" minimum="1.4" maximum="2.6" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/srs" minimum="0.027999999999999997" maximum="0.052000000000000005" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/pu_ea" minimum="0.13999999999999999" maximum="0.26" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/pu_ra" minimum="0.13999999999999999" maximum="0.26" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/qnlc" minimum="0.0034999999999999996" maximum="0.006500000000000001" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/qplc" minimum="0.00015749999999999998" maximum="0.0002925" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/xqcp" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/xqcn" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/xqp" minimum="1.4" maximum="2.6" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/xqn" minimum="0.7525" maximum="1.3975" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/qun3" minimum="0.0028" maximum="0.005200000000000001" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/qun4" minimum="0.0028" maximum="0.005200000000000001" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/qurp" minimum="0.0028" maximum="0.005200000000000001" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/snplux" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/sdo" minimum="0.034999999999999996" maximum="0.065" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/alpha" minimum="3.5" maximum="6.5" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/beta" minimum="0.06999999999999999" maximum="0.13" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/phim" minimum="0.017499999999999998" maximum="0.0325" />
+<!-- <parameter file="fabm.yaml" variable="instances/P2/parameters/Limnut" minimum="0.7" maximum="1.3" /> -->
+<parameter file="fabm.yaml" variable="instances/P2/parameters/uB1c_O2" minimum="0.077" maximum="0.14300000000000002" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/urB1_O2" minimum="0.06999999999999999" maximum="0.13" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/iopABS" minimum="0.00287" maximum="0.0053300000000000005" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/iopBBS" minimum="0.0021" maximum="0.0039000000000000003" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/c0" minimum="0.0007" maximum="0.0013000000000000002" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/resm" minimum="0.0" maximum="0.0" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/esni" minimum="0.48999999999999994" maximum="0.9099999999999999" />
+<!-- <parameter file="fabm.yaml" variable="instances/P2/parameters/ndeposition" minimum="2.0999999999999996" maximum="3.9000000000000004" /> -->
+<parameter file="fabm.yaml" variable="instances/P2/parameters/qxc2" minimum="0.35" maximum="0.65" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/qxc3" minimum="0.034999999999999996" maximum="0.065" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/qxn2" minimum="0.35" maximum="0.65" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/qxn3" minimum="0.034999999999999996" maximum="0.065" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/qxp2" minimum="0.42" maximum="0.78" />
+<parameter file="fabm.yaml" variable="instances/P2/parameters/qxp3" minimum="0.020999999999999998" maximum="0.039" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/sum" minimum="1.4" maximum="2.6" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/q10" minimum="1.4" maximum="2.6" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/srs" minimum="0.0315" maximum="0.058499999999999996" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/pu_ea" minimum="0.13999999999999999" maximum="0.26" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/pu_ra" minimum="0.13999999999999999" maximum="0.26" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/qnlc" minimum="0.0042" maximum="0.0078000000000000005" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/qplc" minimum="0.000245" maximum="0.000455" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/xqcp" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/xqcn" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/xqp" minimum="1.0499999999999998" maximum="1.9500000000000002" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/xqn" minimum="0.735" maximum="1.3650000000000002" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/qun3" minimum="0.0042" maximum="0.0078000000000000005" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/qun4" minimum="0.0049" maximum="0.0091" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/qurp" minimum="0.0042" maximum="0.0078000000000000005" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/snplux" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/sdo" minimum="0.0385" maximum="0.07150000000000001" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/alpha" minimum="4.199999999999999" maximum="7.800000000000001" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/beta" minimum="0.08399999999999999" maximum="0.156" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/phim" minimum="0.010499999999999999" maximum="0.0195" />
+<!-- <parameter file="fabm.yaml" variable="instances/P3/parameters/Limnut" minimum="0.7" maximum="1.3" /> -->
+<parameter file="fabm.yaml" variable="instances/P3/parameters/uB1c_O2" minimum="0.077" maximum="0.14300000000000002" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/urB1_O2" minimum="0.06999999999999999" maximum="0.13" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/iopABS" minimum="0.0161" maximum="0.0299" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/iopBBS" minimum="0.0021" maximum="0.0039000000000000003" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/c0" minimum="0.00616" maximum="0.01144" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/resm" minimum="0.0" maximum="0.0" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/esni" minimum="0.48999999999999994" maximum="0.9099999999999999" />
+<!-- <parameter file="fabm.yaml" variable="instances/P3/parameters/ndeposition" minimum="2.0999999999999996" maximum="3.9000000000000004" /> -->
+<parameter file="fabm.yaml" variable="instances/P3/parameters/qxc2" minimum="0.35" maximum="0.65" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/qxc3" minimum="0.034999999999999996" maximum="0.065" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/qxn2" minimum="0.35" maximum="0.65" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/qxn3" minimum="0.034999999999999996" maximum="0.065" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/qxp2" minimum="0.42" maximum="0.78" />
+<parameter file="fabm.yaml" variable="instances/P3/parameters/qxp3" minimum="0.020999999999999998" maximum="0.039" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/sum" minimum="0.7875" maximum="1.4625000000000001" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/q10" minimum="1.4" maximum="2.6" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/srs" minimum="0.0245" maximum="0.045500000000000006" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/pu_ea" minimum="0.13999999999999999" maximum="0.26" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/pu_ra" minimum="0.13999999999999999" maximum="0.26" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/qnlc" minimum="0.0029399999999999995" maximum="0.00546" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/qplc" minimum="7e-05" maximum="0.00013000000000000002" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/xqcp" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/xqcn" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/xqp" minimum="1.89" maximum="3.5100000000000002" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/xqn" minimum="0.77" maximum="1.4300000000000002" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/qun3" minimum="0.0014" maximum="0.0026000000000000003" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/qun4" minimum="0.0014" maximum="0.0026000000000000003" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/qurp" minimum="0.0014" maximum="0.0026000000000000003" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/snplux" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/sdo" minimum="0.0315" maximum="0.058499999999999996" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/alpha" minimum="2.0999999999999996" maximum="3.9000000000000004" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/beta" minimum="0.041999999999999996" maximum="0.078" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/phim" minimum="0.0315" maximum="0.058499999999999996" />
+<!-- <parameter file="fabm.yaml" variable="instances/P4/parameters/Limnut" minimum="0.7" maximum="1.3" /> -->
+<parameter file="fabm.yaml" variable="instances/P4/parameters/uB1c_O2" minimum="0.077" maximum="0.14300000000000002" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/urB1_O2" minimum="0.06999999999999999" maximum="0.13" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/iopABS" minimum="0.0056" maximum="0.010400000000000001" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/iopBBS" minimum="0.000336" maximum="0.000624" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/c0" minimum="7e-05" maximum="0.00013000000000000002" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/resm" minimum="3.5" maximum="6.5" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/esni" minimum="0.48999999999999994" maximum="0.9099999999999999" />
+<!-- <parameter file="fabm.yaml" variable="instances/P4/parameters/ndeposition" minimum="2.0999999999999996" maximum="3.9000000000000004" /> -->
+<parameter file="fabm.yaml" variable="instances/P4/parameters/qxc2" minimum="0.35" maximum="0.65" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/qxc3" minimum="0.034999999999999996" maximum="0.065" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/qxn2" minimum="0.35" maximum="0.65" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/qxn3" minimum="0.034999999999999996" maximum="0.065" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/qxp2" minimum="0.42" maximum="0.78" />
+<parameter file="fabm.yaml" variable="instances/P4/parameters/qxp3" minimum="0.020999999999999998" maximum="0.039" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/q10" minimum="1.4" maximum="2.6" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/minfood" minimum="8.399999999999999" maximum="15.600000000000001" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/chuc" minimum="25.2" maximum="46.800000000000004" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/sum" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/pu" minimum="0.42" maximum="0.78" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/pu_ea" minimum="0.35" maximum="0.65" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/pu_eaR" minimum="0.63" maximum="1.1700000000000002" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/pe_R1" minimum="0.35" maximum="0.65" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/srs" minimum="0.010499999999999999" maximum="0.0195" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/sd" minimum="0.034999999999999996" maximum="0.065" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/sdo" minimum="0.13999999999999999" maximum="0.26" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/chro" minimum="5.467" maximum="10.153" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/qpc" minimum="0.0005501999999999999" maximum="0.0010218" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/qnc" minimum="0.00882" maximum="0.016380000000000002" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/Minprey" minimum="210.0" maximum="390.0" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/repw" minimum="0.0017499999999999998" maximum="0.0032500000000000003" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/mort" minimum="0.0017499999999999998" maximum="0.0032500000000000003" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/R1R2" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/xR1p" minimum="0.84" maximum="1.56" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/xR1n" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/urB1_O2" minimum="0.06999999999999999" maximum="0.13" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/gutdiss" minimum="0.35" maximum="0.65" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/c0" minimum="0.00231" maximum="0.00429" />
+<!-- <parameter file="fabm.yaml" variable="instances/Z4/parameters/nprey" minimum="6.3" maximum="11.700000000000001" /> -->
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/suprey1" minimum="0.105" maximum="0.195" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/suprey2" minimum="0.034999999999999996" maximum="0.065" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/suprey3" minimum="0.0" maximum="0.0" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/suprey4" minimum="0.105" maximum="0.195" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/suprey5" minimum="0.175" maximum="0.325" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/suprey6" minimum="0.175" maximum="0.325" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/suprey7" minimum="0.034999999999999996" maximum="0.065" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/suprey8" minimum="0.0" maximum="0.0" />
+<parameter file="fabm.yaml" variable="instances/Z4/parameters/suprey9" minimum="0.06999999999999999" maximum="0.13" />
+<parameter file="fabm.yaml" variable="instances/Z5/parameters/q10" minimum="1.4" maximum="2.6" />
+<parameter file="fabm.yaml" variable="instances/Z5/parameters/minfood" minimum="8.399999999999999" maximum="15.600000000000001" />
+<parameter file="fabm.yaml" variable="instances/Z5/parameters/chuc" minimum="22.4" maximum="41.6" />
+<parameter file="fabm.yaml" variable="instances/Z5/parameters/sum" minimum="0.875" maximum="1.625" />
+<parameter file="fabm.yaml" variable="instances/Z5/parameters/pu" minimum="0.35" maximum="0.65" />
+<parameter file="fabm.yaml" variable="instances/Z5/parameters/pu_ea" minimum="0.35" maximum="0.65" />
+<parameter file="fabm.yaml" variable="instances/Z5/parameters/pe_R1" minimum="0.35" maximum="0.65" />
+<parameter file="fabm.yaml" variable="instances/Z5/parameters/srs" minimum="0.013999999999999999" maximum="0.026000000000000002" />
+<parameter file="fabm.yaml" variable="instances/Z5/parameters/sd" minimum="0.034999999999999996" maximum="0.065" />
+<parameter file="fabm.yaml" variable="instances/Z5/parameters/sdo" minimum="0.175" maximum="0.325" />
+<parameter file="fabm.yaml" variable="instances/Z5/parameters/chro" minimum="5.467" maximum="10.153" />
+<parameter file="fabm.yaml" variable="instances/Z5/parameters/qpc" minimum="0.0007" maximum="0.0013000000000000002" />
+<parameter file="fabm.yaml" variable="instances/Z5/parameters/qnc" minimum="0.011689999999999999" maximum="0.02171" />
+<parameter file="fabm.yaml" variable="instances/Z5/parameters/stempp" minimum="0.35" maximum="0.65" />
+<parameter file="fabm.yaml" variable="instances/Z5/parameters/stempn" minimum="0.35" maximum="0.65" />
+<parameter file="fabm.yaml" variable="instances/Z5/parameters/R1R2" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/Z5/parameters/xR1p" minimum="0.84" maximum="1.56" />
+<parameter file="fabm.yaml" variable="instances/Z5/parameters/xR1n" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/Z5/parameters/urB1_O2" minimum="0.06999999999999999" maximum="0.13" />
+<parameter file="fabm.yaml" variable="instances/Z5/parameters/gutdiss" minimum="0.35" maximum="0.65" />
+<parameter file="fabm.yaml" variable="instances/Z5/parameters/c0" minimum="0.00231" maximum="0.00429" />
+<!-- <parameter file="fabm.yaml" variable="instances/Z5/parameters/nprey" minimum="4.8999999999999995" maximum="9.1" /> -->
+<parameter file="fabm.yaml" variable="instances/Z5/parameters/suprey1" minimum="0.06999999999999999" maximum="0.13" />
+<parameter file="fabm.yaml" variable="instances/Z5/parameters/suprey2" minimum="0.105" maximum="0.195" />
+<parameter file="fabm.yaml" variable="instances/Z5/parameters/suprey3" minimum="0.105" maximum="0.195" />
+<parameter file="fabm.yaml" variable="instances/Z5/parameters/suprey4" minimum="0.105" maximum="0.195" />
+<parameter file="fabm.yaml" variable="instances/Z5/parameters/suprey5" minimum="0.06999999999999999" maximum="0.13" />
+<parameter file="fabm.yaml" variable="instances/Z5/parameters/suprey6" minimum="0.105" maximum="0.195" />
+<parameter file="fabm.yaml" variable="instances/Z5/parameters/suprey7" minimum="0.13999999999999999" maximum="0.26" />
+<parameter file="fabm.yaml" variable="instances/Z6/parameters/q10" minimum="1.4" maximum="2.6" />
+<parameter file="fabm.yaml" variable="instances/Z6/parameters/minfood" minimum="8.399999999999999" maximum="15.600000000000001" />
+<parameter file="fabm.yaml" variable="instances/Z6/parameters/chuc" minimum="19.599999999999998" maximum="36.4" />
+<parameter file="fabm.yaml" variable="instances/Z6/parameters/sum" minimum="1.0499999999999998" maximum="1.9500000000000002" />
+<parameter file="fabm.yaml" variable="instances/Z6/parameters/pu" minimum="0.27999999999999997" maximum="0.52" />
+<parameter file="fabm.yaml" variable="instances/Z6/parameters/pu_ea" minimum="0.35" maximum="0.65" />
+<parameter file="fabm.yaml" variable="instances/Z6/parameters/pe_R1" minimum="0.35" maximum="0.65" />
+<parameter file="fabm.yaml" variable="instances/Z6/parameters/srs" minimum="0.017499999999999998" maximum="0.0325" />
+<parameter file="fabm.yaml" variable="instances/Z6/parameters/sd" minimum="0.034999999999999996" maximum="0.065" />
+<parameter file="fabm.yaml" variable="instances/Z6/parameters/sdo" minimum="0.21" maximum="0.39" />
+<parameter file="fabm.yaml" variable="instances/Z6/parameters/chro" minimum="5.467" maximum="10.153" />
+<parameter file="fabm.yaml" variable="instances/Z6/parameters/qpc" minimum="0.0007" maximum="0.0013000000000000002" />
+<parameter file="fabm.yaml" variable="instances/Z6/parameters/qnc" minimum="0.011689999999999999" maximum="0.02171" />
+<parameter file="fabm.yaml" variable="instances/Z6/parameters/stempp" minimum="0.35" maximum="0.65" />
+<parameter file="fabm.yaml" variable="instances/Z6/parameters/stempn" minimum="0.35" maximum="0.65" />
+<parameter file="fabm.yaml" variable="instances/Z6/parameters/R1R2" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/Z6/parameters/xR1p" minimum="0.84" maximum="1.56" />
+<parameter file="fabm.yaml" variable="instances/Z6/parameters/xR1n" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/Z6/parameters/urB1_O2" minimum="0.06999999999999999" maximum="0.13" />
+<parameter file="fabm.yaml" variable="instances/Z6/parameters/gutdiss" minimum="0.35" maximum="0.65" />
+<parameter file="fabm.yaml" variable="instances/Z6/parameters/c0" minimum="0.00231" maximum="0.00429" />
+<!-- <parameter file="fabm.yaml" variable="instances/Z6/parameters/nprey" minimum="2.8" maximum="5.2" /> -->
+<parameter file="fabm.yaml" variable="instances/Z6/parameters/suprey1" minimum="0.315" maximum="0.5850000000000001" />
+<parameter file="fabm.yaml" variable="instances/Z6/parameters/suprey2" minimum="0.105" maximum="0.195" />
+<parameter file="fabm.yaml" variable="instances/Z6/parameters/suprey3" minimum="0.175" maximum="0.325" />
+<parameter file="fabm.yaml" variable="instances/Z6/parameters/suprey4" minimum="0.105" maximum="0.195" />
+<!-- <parameter file="fabm.yaml" variable="instances/L2/parameters/iswcal" minimum="0.7" maximum="1.3" /> -->
+<parameter file="fabm.yaml" variable="instances/L2/parameters/ncalc" minimum="0.567" maximum="1.0530000000000002" />
+<parameter file="fabm.yaml" variable="instances/L2/parameters/ndiss" minimum="1.554" maximum="2.8860000000000006" />
+<parameter file="fabm.yaml" variable="instances/L2/parameters/Rain0" minimum="0.42" maximum="0.78" />
+<parameter file="fabm.yaml" variable="instances/L2/parameters/sedL2" minimum="7.0" maximum="13.0" />
+<parameter file="fabm.yaml" variable="instances/L2/parameters/sL2O3" minimum="0.020999999999999998" maximum="0.039" />
+<!-- <parameter file="fabm.yaml" variable="instances/L2/parameters/ndeposition" minimum="0.7" maximum="1.3" /> -->
+<parameter file="fabm.yaml" variable="instances/bL2/parameters/remin" minimum="0.034999999999999996" maximum="0.065" />
+<parameter file="fabm.yaml" variable="instances/ben_col/parameters/qPW" minimum="0.27999999999999997" maximum="0.52" />
+<parameter file="fabm.yaml" variable="instances/ben_col/parameters/EDZ_mix" minimum="14.0" maximum="26.0" />
+<parameter file="fabm.yaml" variable="instances/ben_col/parameters/d_tot" minimum="0.21" maximum="0.39" />
+<parameter file="fabm.yaml" variable="instances/ben_col/parameters/mtur" minimum="7.0" maximum="13.0" />
+<parameter file="fabm.yaml" variable="instances/ben_col/parameters/htur" minimum="81.19999999999999" maximum="150.8" />
+<parameter file="fabm.yaml" variable="instances/ben_col/parameters/dtur" minimum="0.013999999999999999" maximum="0.026000000000000002" />
+<parameter file="fabm.yaml" variable="instances/ben_col/parameters/irr_min" minimum="1.4" maximum="2.6" />
+<parameter file="fabm.yaml" variable="instances/ben_col/parameters/mirr" minimum="7.0" maximum="13.0" />
+<parameter file="fabm.yaml" variable="instances/ben_col/parameters/hirr" minimum="70.69999999999999" maximum="131.3" />
+<parameter file="fabm.yaml" variable="instances/K1/parameters/c0" minimum="0.00020999999999999998" maximum="0.00039" />
+<parameter file="fabm.yaml" variable="instances/K1/parameters/ads1" minimum="70.0" maximum="130.0" />
+<parameter file="fabm.yaml" variable="instances/K1/parameters/ads2" minimum="70.0" maximum="130.0" />
+<parameter file="fabm.yaml" variable="instances/K1/parameters/ads3" minimum="1.4" maximum="2.6" />
+<parameter file="fabm.yaml" variable="instances/K3/parameters/c0" minimum="0.00020999999999999998" maximum="0.00039" />
+<!-- <parameter file="fabm.yaml" variable="instances/K3/parameters/last_layer" minimum="1.4" maximum="2.6" /> -->
+<parameter file="fabm.yaml" variable="instances/K3/parameters/relax" minimum="3.5" maximum="6.5" />
+<parameter file="fabm.yaml" variable="instances/K3/parameters/minD" minimum="7e-05" maximum="0.00013000000000000002" />
+<parameter file="fabm.yaml" variable="instances/K4/parameters/c0" minimum="0.00020999999999999998" maximum="0.00039" />
+<parameter file="fabm.yaml" variable="instances/K4/parameters/ads1" minimum="2.0999999999999996" maximum="3.9000000000000004" />
+<parameter file="fabm.yaml" variable="instances/K4/parameters/ads2" minimum="2.0999999999999996" maximum="3.9000000000000004" />
+<parameter file="fabm.yaml" variable="instances/K4/parameters/ads3" minimum="2.0999999999999996" maximum="3.9000000000000004" />
+<!-- <parameter file="fabm.yaml" variable="instances/G2/parameters/last_layer" minimum="0.7" maximum="1.3" /> -->
+<parameter file="fabm.yaml" variable="instances/G2/parameters/relax" minimum="3.5" maximum="6.5" />
+<parameter file="fabm.yaml" variable="instances/G2/parameters/minD" minimum="7e-05" maximum="0.00013000000000000002" />
+<parameter file="fabm.yaml" variable="instances/Q6s_aerobic/parameters/minimum_depth" minimum="0.0" maximum="0.0" />
+<parameter file="fabm.yaml" variable="instances/Q6s_aerobic/parameters/remin" minimum="0.0049" maximum="0.0091" />
+<parameter file="fabm.yaml" variable="instances/Q6s_anaerobic/parameters/maximum_depth" minimum="0.21" maximum="0.39" />
+<parameter file="fabm.yaml" variable="instances/Q6s_anaerobic/parameters/remin" minimum="0.0049" maximum="0.0091" />
+<!-- <parameter file="fabm.yaml" variable="instances/Q6s_anaerobic/parameters/source_depth_distribution" minimum="1.4" maximum="2.6" /> -->
+<parameter file="fabm.yaml" variable="instances/ben_nit/parameters/q10nit" minimum="1.4" maximum="2.6" />
+<parameter file="fabm.yaml" variable="instances/ben_nit/parameters/hM4M3" minimum="7.0" maximum="13.0" />
+<!-- <parameter file="fabm.yaml" variable="instances/ben_nit/parameters/ISWph" minimum="0.7" maximum="1.3" /> -->
+<parameter file="fabm.yaml" variable="instances/ben_nit/parameters/sM4M3" minimum="2.8" maximum="5.2" />
+<parameter file="fabm.yaml" variable="instances/ben_nit/parameters/xno3" minimum="1.4" maximum="2.6" />
+<parameter file="fabm.yaml" variable="instances/ben_nit/parameters/pammon" minimum="0.35" maximum="0.65" />
+<parameter file="fabm.yaml" variable="instances/ben_nit/parameters/pdenit" minimum="0.034999999999999996" maximum="0.065" />
+<parameter file="fabm.yaml" variable="instances/ben_nit/parameters/xn2" minimum="0.875" maximum="1.625" />
+<parameter file="fabm.yaml" variable="instances/ben_nit/parameters/hM3G4" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/H1/parameters/qnc" minimum="0.011689999999999999" maximum="0.02171" />
+<parameter file="fabm.yaml" variable="instances/H1/parameters/qpc" minimum="0.0008749999999999999" maximum="0.0016250000000000001" />
+<parameter file="fabm.yaml" variable="instances/H1/parameters/q10" minimum="1.4" maximum="2.6" />
+<parameter file="fabm.yaml" variable="instances/H1/parameters/dd" minimum="0.0007" maximum="0.0013000000000000002" />
+<!-- <parameter file="fabm.yaml" variable="instances/H1/parameters/nfood" minimum="2.0999999999999996" maximum="3.9000000000000004" /> -->
+<parameter file="fabm.yaml" variable="instances/H1/parameters/su1" minimum="0.00035" maximum="0.0006500000000000001" />
+<parameter file="fabm.yaml" variable="instances/H1/parameters/suf2" minimum="0.00014" maximum="0.00026000000000000003" />
+<parameter file="fabm.yaml" variable="instances/H1/parameters/puinc2" minimum="1.4" maximum="2.6" />
+<parameter file="fabm.yaml" variable="instances/H1/parameters/pue2" minimum="0.06999999999999999" maximum="0.13" />
+<parameter file="fabm.yaml" variable="instances/H1/parameters/pue3" minimum="0.06999999999999999" maximum="0.13" />
+<parameter file="fabm.yaml" variable="instances/H1/parameters/pur" minimum="0.21" maximum="0.39" />
+<parameter file="fabm.yaml" variable="instances/H1/parameters/sr" minimum="0.013999999999999999" maximum="0.026000000000000002" />
+<parameter file="fabm.yaml" variable="instances/H1/parameters/pdQ1" minimum="0.06999999999999999" maximum="0.13" />
+<parameter file="fabm.yaml" variable="instances/H1/parameters/sd" minimum="0.034999999999999996" maximum="0.065" />
+<parameter file="fabm.yaml" variable="instances/H1_Q6/parameters/minimum_depth" minimum="0.0" maximum="0.0" />
+<parameter file="fabm.yaml" variable="instances/H1_Q7/parameters/minimum_depth" minimum="0.0" maximum="0.0" />
+<parameter file="fabm.yaml" variable="instances/H2/parameters/qnc" minimum="0.011689999999999999" maximum="0.02171" />
+<parameter file="fabm.yaml" variable="instances/H2/parameters/qpc" minimum="0.0008749999999999999" maximum="0.0016250000000000001" />
+<parameter file="fabm.yaml" variable="instances/H2/parameters/q10" minimum="1.4" maximum="2.6" />
+<parameter file="fabm.yaml" variable="instances/H2/parameters/dd" minimum="0.006999999999999999" maximum="0.013000000000000001" />
+<!-- <parameter file="fabm.yaml" variable="instances/H2/parameters/nfood" minimum="1.4" maximum="2.6" /> -->
+<parameter file="fabm.yaml" variable="instances/H2/parameters/suf1" minimum="0.00014" maximum="0.00026000000000000003" />
+<parameter file="fabm.yaml" variable="instances/H2/parameters/puinc1" minimum="1.4" maximum="2.6" />
+<parameter file="fabm.yaml" variable="instances/H2/parameters/pue1" minimum="0.0" maximum="0.0" />
+<parameter file="fabm.yaml" variable="instances/H2/parameters/pue2" minimum="0.0" maximum="0.0" />
+<parameter file="fabm.yaml" variable="instances/H2/parameters/pur" minimum="0.21" maximum="0.39" />
+<parameter file="fabm.yaml" variable="instances/H2/parameters/sr" minimum="0.013999999999999999" maximum="0.026000000000000002" />
+<parameter file="fabm.yaml" variable="instances/H2/parameters/pdQ1" minimum="0.0" maximum="0.0" />
+<parameter file="fabm.yaml" variable="instances/H2/parameters/sd" minimum="0.034999999999999996" maximum="0.065" />
+<parameter file="fabm.yaml" variable="instances/H2_Q6/parameters/maximum_depth" minimum="0.21" maximum="0.39" />
+<!-- <parameter file="fabm.yaml" variable="instances/H2_Q6/parameters/source_depth_distribution" minimum="2.0999999999999996" maximum="3.9000000000000004" /> -->
+<parameter file="fabm.yaml" variable="instances/H2_Q7/parameters/maximum_depth" minimum="0.21" maximum="0.39" />
+<!-- <parameter file="fabm.yaml" variable="instances/H2_Q7/parameters/source_depth_distribution" minimum="2.0999999999999996" maximum="3.9000000000000004" /> -->
+<parameter file="fabm.yaml" variable="instances/Y2/parameters/qnc" minimum="0.00833" maximum="0.015470000000000001" />
+<parameter file="fabm.yaml" variable="instances/Y2/parameters/qpc" minimum="0.0005543999999999999" maximum="0.0010295999999999999" />
+<parameter file="fabm.yaml" variable="instances/Y2/parameters/c0" minimum="0.0007" maximum="0.0013000000000000002" />
+<parameter file="fabm.yaml" variable="instances/Y2/parameters/q10" minimum="1.4" maximum="2.6" />
+<parameter file="fabm.yaml" variable="instances/Y2/parameters/rlO2" minimum="0.0" maximum="0.0" />
+<parameter file="fabm.yaml" variable="instances/Y2/parameters/hO2" minimum="0.0" maximum="0.0" />
+<parameter file="fabm.yaml" variable="instances/Y2/parameters/xcl" minimum="1750.0" maximum="3250.0" />
+<parameter file="fabm.yaml" variable="instances/Y2/parameters/xcs" minimum="2100.0" maximum="3900.0" />
+<parameter file="fabm.yaml" variable="instances/Y2/parameters/xch" minimum="3500.0" maximum="6500.0" />
+<parameter file="fabm.yaml" variable="instances/Y2/parameters/su" minimum="0.077" maximum="0.14300000000000002" />
+<parameter file="fabm.yaml" variable="instances/Y2/parameters/lu" minimum="175.0" maximum="325.0" />
+<parameter file="fabm.yaml" variable="instances/Y2/parameters/hu" minimum="2100.0" maximum="3900.0" />
+<parameter file="fabm.yaml" variable="instances/Y2/parameters/pue" minimum="0.24499999999999997" maximum="0.45499999999999996" />
+<parameter file="fabm.yaml" variable="instances/Y2/parameters/pueQ" minimum="0.5599999999999999" maximum="1.04" />
+<parameter file="fabm.yaml" variable="instances/Y2/parameters/pudil" minimum="0.5599999999999999" maximum="1.04" />
+<parameter file="fabm.yaml" variable="instances/Y2/parameters/sd" minimum="0.0007" maximum="0.0013000000000000002" />
+<parameter file="fabm.yaml" variable="instances/Y2/parameters/sdmO2" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/Y2/parameters/sdc" minimum="0.015399999999999999" maximum="0.0286" />
+<parameter file="fabm.yaml" variable="instances/Y2/parameters/xdc" minimum="-0.9099999999999999" maximum="-0.48999999999999994" />
+<parameter file="fabm.yaml" variable="instances/Y2/parameters/sr" minimum="0.00189" maximum="0.00351" />
+<parameter file="fabm.yaml" variable="instances/Y2/parameters/pur" minimum="0.24499999999999997" maximum="0.45499999999999996" />
+<!-- <parameter file="fabm.yaml" variable="instances/Y2/parameters/nfood" minimum="2.8" maximum="5.2" /> -->
+<parameter file="fabm.yaml" variable="instances/Y2/parameters/pufood1" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/Y2/parameters/pufood2" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/Y2/parameters/pufood3" minimum="0.06999999999999999" maximum="0.13" />
+<parameter file="fabm.yaml" variable="instances/Y2/parameters/pufood4" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/Y2/parameters/ptur" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/Y2/parameters/pirr" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/Y2_Q6_source/parameters/minimum_depth" minimum="0.0017499999999999998" maximum="0.0032500000000000003" />
+<parameter file="fabm.yaml" variable="instances/Y2_Q6_source/parameters/maximum_depth" minimum="0.21" maximum="0.39" />
+<parameter file="fabm.yaml" variable="instances/Y2_Q6_source_anaerobic/parameters/maximum_depth" minimum="0.21" maximum="0.39" />
+<parameter file="fabm.yaml" variable="instances/Y2_Q6_sink/parameters/minimum_depth" minimum="0.0" maximum="0.0" />
+<parameter file="fabm.yaml" variable="instances/Y3/parameters/qnc" minimum="0.00833" maximum="0.015470000000000001" />
+<parameter file="fabm.yaml" variable="instances/Y3/parameters/qpc" minimum="0.0005543999999999999" maximum="0.0010295999999999999" />
+<parameter file="fabm.yaml" variable="instances/Y3/parameters/c0" minimum="0.0007" maximum="0.0013000000000000002" />
+<parameter file="fabm.yaml" variable="instances/Y3/parameters/q10" minimum="1.4" maximum="2.6" />
+<parameter file="fabm.yaml" variable="instances/Y3/parameters/rlO2" minimum="0.0" maximum="0.0" />
+<parameter file="fabm.yaml" variable="instances/Y3/parameters/hO2" minimum="0.0" maximum="0.0" />
+<parameter file="fabm.yaml" variable="instances/Y3/parameters/xcl" minimum="1750.0" maximum="3250.0" />
+<parameter file="fabm.yaml" variable="instances/Y3/parameters/xcs" minimum="2100.0" maximum="3900.0" />
+<parameter file="fabm.yaml" variable="instances/Y3/parameters/xch" minimum="3500.0" maximum="6500.0" />
+<parameter file="fabm.yaml" variable="instances/Y3/parameters/su" minimum="0.063" maximum="0.11699999999999999" />
+<parameter file="fabm.yaml" variable="instances/Y3/parameters/lu" minimum="7.0" maximum="13.0" />
+<parameter file="fabm.yaml" variable="instances/Y3/parameters/hu" minimum="210.0" maximum="390.0" />
+<parameter file="fabm.yaml" variable="instances/Y3/parameters/pue" minimum="0.24499999999999997" maximum="0.45499999999999996" />
+<parameter file="fabm.yaml" variable="instances/Y3/parameters/pueQ" minimum="0.595" maximum="1.105" />
+<parameter file="fabm.yaml" variable="instances/Y3/parameters/pudil" minimum="0.5599999999999999" maximum="1.04" />
+<parameter file="fabm.yaml" variable="instances/Y3/parameters/sd" minimum="0.0007" maximum="0.0013000000000000002" />
+<parameter file="fabm.yaml" variable="instances/Y3/parameters/sdmO2" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/Y3/parameters/sdc" minimum="0.015399999999999999" maximum="0.0286" />
+<parameter file="fabm.yaml" variable="instances/Y3/parameters/xdc" minimum="-0.9099999999999999" maximum="-0.48999999999999994" />
+<parameter file="fabm.yaml" variable="instances/Y3/parameters/sr" minimum="0.00189" maximum="0.00351" />
+<parameter file="fabm.yaml" variable="instances/Y3/parameters/pur" minimum="0.27999999999999997" maximum="0.52" />
+<!-- <parameter file="fabm.yaml" variable="instances/Y3/parameters/nfood" minimum="4.199999999999999" maximum="7.800000000000001" /> -->
+<parameter file="fabm.yaml" variable="instances/Y3/parameters/pufood1" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/Y3/parameters/pufood2" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/Y3/parameters/pufood3" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/Y3/parameters/pufood4" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/Y3/parameters/pufood5" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/Y3/parameters/pufood6" minimum="0.06999999999999999" maximum="0.13" />
+<parameter file="fabm.yaml" variable="instances/Y3/parameters/dwat" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/Y3/parameters/dQ6" minimum="0.0017499999999999998" maximum="0.0032500000000000003" />
+<parameter file="fabm.yaml" variable="instances/Y3_Q6/parameters/minimum_depth" minimum="0.0" maximum="0.0" />
+<parameter file="fabm.yaml" variable="instances/Y3_Q6/parameters/maximum_depth" minimum="0.0017499999999999998" maximum="0.0032500000000000003" />
+<parameter file="fabm.yaml" variable="instances/Y4/parameters/qnc" minimum="0.00833" maximum="0.015470000000000001" />
+<parameter file="fabm.yaml" variable="instances/Y4/parameters/qpc" minimum="0.0005543999999999999" maximum="0.0010295999999999999" />
+<parameter file="fabm.yaml" variable="instances/Y4/parameters/c0" minimum="0.0007" maximum="0.0013000000000000002" />
+<parameter file="fabm.yaml" variable="instances/Y4/parameters/q10" minimum="1.4" maximum="2.6" />
+<parameter file="fabm.yaml" variable="instances/Y4/parameters/rlO2" minimum="0.0" maximum="0.0" />
+<parameter file="fabm.yaml" variable="instances/Y4/parameters/hO2" minimum="0.0" maximum="0.0" />
+<parameter file="fabm.yaml" variable="instances/Y4/parameters/xcl" minimum="17500.0" maximum="32500.0" />
+<parameter file="fabm.yaml" variable="instances/Y4/parameters/xcs" minimum="2100.0" maximum="3900.0" />
+<parameter file="fabm.yaml" variable="instances/Y4/parameters/xch" minimum="3500.0" maximum="6500.0" />
+<parameter file="fabm.yaml" variable="instances/Y4/parameters/su" minimum="0.27999999999999997" maximum="0.52" />
+<parameter file="fabm.yaml" variable="instances/Y4/parameters/lu" minimum="35.0" maximum="65.0" />
+<parameter file="fabm.yaml" variable="instances/Y4/parameters/hu" minimum="700.0" maximum="1300.0" />
+<parameter file="fabm.yaml" variable="instances/Y4/parameters/pue" minimum="0.175" maximum="0.325" />
+<parameter file="fabm.yaml" variable="instances/Y4/parameters/pueQ" minimum="0.27999999999999997" maximum="0.52" />
+<parameter file="fabm.yaml" variable="instances/Y4/parameters/pudil" minimum="0.5599999999999999" maximum="1.04" />
+<parameter file="fabm.yaml" variable="instances/Y4/parameters/sd" minimum="0.006999999999999999" maximum="0.013000000000000001" />
+<parameter file="fabm.yaml" variable="instances/Y4/parameters/sdmO2" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/Y4/parameters/sdc" minimum="0.013999999999999999" maximum="0.026000000000000002" />
+<parameter file="fabm.yaml" variable="instances/Y4/parameters/xdc" minimum="-0.9099999999999999" maximum="-0.48999999999999994" />
+<parameter file="fabm.yaml" variable="instances/Y4/parameters/sr" minimum="0.006999999999999999" maximum="0.013000000000000001" />
+<parameter file="fabm.yaml" variable="instances/Y4/parameters/pur" minimum="0.315" maximum="0.5850000000000001" />
+<!-- <parameter file="fabm.yaml" variable="instances/Y4/parameters/nfood" minimum="2.8" maximum="5.2" /> -->
+<parameter file="fabm.yaml" variable="instances/Y4/parameters/pufood1" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/Y4/parameters/pufood2" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/Y4/parameters/pufood3" minimum="0.7" maximum="1.3" />
+<parameter file="fabm.yaml" variable="instances/Y4/parameters/pufood4" minimum="0.21" maximum="0.39" />
+<parameter file="fabm.yaml" variable="instances/Y4/parameters/pirr" minimum="0.13999999999999999" maximum="0.26" />
+<parameter file="fabm.yaml" variable="instances/Y4_Q6/parameters/minimum_depth" minimum="0.0" maximum="0.0" />
+<parameter file="fabm.yaml" variable="instances/Y4_Q6/parameters/maximum_depth" minimum="0.020999999999999998" maximum="0.039" />
+  </parameters>
+  <targets>
+    <!--examples below are for ERSEM-->
+    <target name="non-living_particulate_organic_carbon" expression="(((R4_c+R6_c+R8_c)*h)[:,145:].sum(axis=1)/h[:,145:].sum(axis=1)).mean(axis=0)" path="result.nc"/>
+    <target name="trophic_efficiency" expression="((P1_c+P2_c+P3_c+P4_c)*h)[:,145:].sum(axis=1).mean(axis=0)/((Z4_c+Z5_c+Z6_c)*h)[:,145:].sum(axis=1).mean(axis=0)" path="result.nc"/>
+    <target name="net_primary_production" expression="((P1_netPI+P2_netPI+P3_netPI+P4_netPI)*h)[:,145:].sum(axis=1).mean(axis=0)" path="result.nc"/>
+    <target name="pH" expression="(((O3_pH)*h)[:,145:].sum(axis=1)/h[:,145:].sum(axis=1)).mean(axis=0)" path="result.nc"/>
+    <target name="O2" expression="(((O2_o)*h)[:,145:160].sum(axis=1)/h[:,145:160].sum(axis=1)).mean(axis=0)" path="result.nc"/>
+    <target name="large_over_all_phytoplankton" expression="((P1_c+P4_c)*h)[:,145:].sum(axis=1).mean(axis=0)/((P1_c+P2_c+P3_c+P4_c)*h)[:,145:].sum(axis=1).mean(axis=0)" path="result.nc"/>
+    <target name="chl_max_in_5m" expression="( cumsum (((P1_Chl+P2_Chl+P3_Chl+P4_Chl)*h)[:,199:].sum(axis=1)/h[:,199:].sum(axis=1)) [3:]/3.  - cumsum (((P1_Chl+P2_Chl+P3_Chl+P4_Chl)*h)[:,199:].sum(axis=1)/h[:,199:].sum(axis=1)) [:-3]/3. ).max(axis=0)" path="result.nc"/>
+    <target name="chl_max_in_10m_to_150m" expression="(P1_Chl+P2_Chl+P3_Chl+P4_Chl)[:,152:192].mean(axis=0).max(axis=0)" path="result.nc"/>
+    <target name="timing_of_chl_max_in_5m" expression="( cumsum (((P1_Chl+P2_Chl+P3_Chl+P4_Chl)*h)[:,199:].sum(axis=1)/h[:,199:].sum(axis=1)) [3:]/3.  - cumsum (((P1_Chl+P2_Chl+P3_Chl+P4_Chl)*h)[:,199:].sum(axis=1)/h[:,199:].sum(axis=1)) [:-3]/3. ).argmax(axis=0)" path="result.nc"/>
+    <target name="depth_of_chl_max_in_10m_to_150m" expression="(P1_Chl+P2_Chl+P3_Chl+P4_Chl)[:,152:192].mean(axis=0).argmax(axis=0)" path="result.nc"/>
+    <target name="ocean_colour" expression="(((P1_Chl+P2_Chl+P3_Chl+P4_Chl)*h)[:,192:].sum(axis=1)/h[:,192:].sum(axis=1)).mean(axis=0)" path="result.nc"/>
+    <target name="BGC_Argo_chl_0m_to_300m" expression="(((P1_Chl+P2_Chl+P3_Chl+P4_Chl)*h)[:,138:].sum(axis=1)/h[:,138:].sum(axis=1)).mean(axis=0)" path="result.nc"/>
+    <target name="BGC_Argo_no3_0m_to_300m" expression="(((N3_n)*h)[:,138:].sum(axis=1)/h[:,138:].sum(axis=1)).mean(axis=0)" path="result.nc"/>
+    <target name="BGC_Argo_po4_0m_to_300m" expression="(((N1_p)*h)[:,138:].sum(axis=1)/h[:,138:].sum(axis=1)).mean(axis=0)" path="result.nc"/>
+    <target name="BGC_Argo_POC_0m_to_300m" expression="(((R4_c+R6_c+P2_c+P3_c+Z6_c+B1_c)*h)[:,138:].sum(axis=1)/h[:,138:].sum(axis=1)).mean(axis=0)" path="result.nc"/>
+    <target name="BGC_Argo_POC_300m_to_1000m" expression="(((R4_c+R6_c+P2_c+P3_c+Z6_c+B1_c)*h)[:,124:138].sum(axis=1)/h[:,124:138].sum(axis=1)).mean(axis=0)" path="result.nc"/>
+    <target name="BGC_Argo_o2_0m_to_300m" expression="(((O2_o)*h)[:,138:].sum(axis=1)/h[:,138:].sum(axis=1)).mean(axis=0)" path="result.nc"/>
+    <target name="BGC_Argo_o2_300m_to_1000m" expression="(((O2_o)*h)[:,124:138].sum(axis=1)/h[:,124:138].sum(axis=1)).mean(axis=0)" path="result.nc"/>
+    <target name="BGC_Argo_DIC_0m_to_300m" expression="(((O3_c)*h)[:,138:].sum(axis=1)/h[:,138:].sum(axis=1)).mean(axis=0)" path="result.nc"/>
+    <target name="BGC_Argo_DIC_300m_to_1000m" expression="(((O3_c)*h)[:,124:138].sum(axis=1)/h[:,124:138].sum(axis=1)).mean(axis=0)" path="result.nc"/>
+  </targets>
+</config>
