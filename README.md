@@ -116,40 +116,9 @@ You should apply similar relaxation to your physical tracers: `temperature/relax
 ## Additional GOTM settings
 
 * Make sure FABM is active: in `gotm.yaml`, set `fabm/use` to `true`.
-* Check the model time step (`time/dt` in `gotm.yaml`): a value to use for biogeochemistry is 600 s.
+* Check the model time step (`time/dt` in `gotm.yaml`): a typical value to use for biogeochemistry is 600 s (whereas a physics-only simulation may use 1800 s)
 * Allow GOTM to repair (clip) the model state if values go out of bounds: set `fabm/repair_state` in `gotm.yaml` to `true`.
 * Make sure all model outputs of interest are saved. The easiest way to achieve this is by making sure there is one entry (file) in the `output` section of `gotm.yaml` that includes all variables. That means it has `- source: /*` listed under `variables`.
-
-# Observability experiments
-
-Sampling: random from univariate distribution with ensemble size 100:
-
-```
-parsac sensitivity sample random northsea_observability.xml northsea_observability.pickle --dir /g100_work/tra21_seamless/<MODEL>/<EXP> random 100
-```
-
-For `<MODEL>` we recommend the name of the biogeochemical model (ERGOM, ERSEM, BFM, ECOSMO, PISCES). `EXP>` is the name of the experiment, for instance, to indicate which observable was perturbed (OBS1, OBS2, etc.)
-
-Run GOTM in parallel:
-
-```
-sbatch run_observability.sbatch
-```
-
-Investigate spread across the ensemble with the `analyze_observability.py` in the `parsac` directory:
-
-```
-python analyze_observability.py northsea_observability.pickle result.nc <VARIABLE>            # for a Hovmuller plot (time/depth) of the cv
-python analyze_observability.py northsea_observability.pickle result.nc <VARIABLE> --depth 0  # for a timeseries of spread at depth 0 m
-```
-
-Analysis:
-
-```
-parsac sensitivity analyze northsea_observability.pickle
-```
-
-The metric we use is the coefficient of variation of output [indicators], divided by coefficient of variation of input [observable].
 
 # Running on CINECA
 
