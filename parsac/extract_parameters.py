@@ -7,7 +7,7 @@ parser.add_argument('--scale', type=float, default=0.3)
 args = parser.parse_args()
 
 with open(args.fabm_yaml) as f:
-    y = yaml.load(f)
+    y = yaml.safe_load(f)
 
 for name, info in y['instances'].items():
     parameters = info.get('parameters', {})
