@@ -16,6 +16,9 @@ dependencies:
   - pyyaml
   - nco
   - salib
+  - blas
+  - lapack
+  - mpi
   - pip:
       - -e ./extern/parsac
       - https://www.parallelpython.com/downloads/pp/pp-1.6.4.4.zip
