@@ -27,7 +27,7 @@ rm -rf ${WORK_DIR}
 # Build eat
 WORK_DIR=`mktemp -d`
 cd ${WORK_DIR}
-cmake ${REPO_DIR}/extern/eat -DFABM_BASE=${REPO_DIR}/extern/fabm -DPDAF_BASE=${REPO_DIR}/PDAF_V1.16_var_devel $FABM_ARGS
+cmake ${REPO_DIR}/extern/eat -DFABM_BASE=${REPO_DIR}/extern/fabm $FABM_ARGS
 make -j4 install
 
 # Build 2d test
