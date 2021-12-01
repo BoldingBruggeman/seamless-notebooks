@@ -13,3 +13,6 @@
 [submodule "extern/parsac"]
 	path = extern/parsac
 	url = ../parsac.git
+[submodule "extern/eat"]
+	path = extern/eat
+	url = ../eat
