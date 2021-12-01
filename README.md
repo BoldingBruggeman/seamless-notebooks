@@ -34,6 +34,7 @@ To update this repository *including its submodules (FABM, ERSEM, PISCES, etc.)*
 ```
 conda activate seamless-bb
 git pull --recurse-submodules
+git submodule update --init --recursive
 conda env update -f environment.yml
 bash ./install
 ```
