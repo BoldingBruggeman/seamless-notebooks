@@ -31,17 +31,17 @@ jobs:
           gotm
           cd ../northsea
           gotm
-      - name: Run parsac
-        run: |
-          source ${CONDA}/etc/profile.d/conda.sh
-          conda activate seamless-bb
-          cd parsac
-          parsac sensitivity sample northsea_sa.xml northsea_sa.pickle saltelli 4
-          parsac sensitivity run --ncpus 2 northsea_sa.pickle
-          parsac sensitivity analyze northsea_sa.pickle sobol
+#      - name: Run parsac
+#        run: |
+#          source ${CONDA}/etc/profile.d/conda.sh
+#          conda activate seamless-bb
+#          cd parsac
+#          parsac sensitivity sample northsea_sa.xml northsea_sa.pickle saltelli 4
+#          parsac sensitivity run --ncpus 2 northsea_sa.pickle
+#          parsac sensitivity analyze northsea_sa.pickle sobol
       - name: Run eat/2d
         run: |
           source ${CONDA}/etc/profile.d/conda.sh
           conda activate seamless-bb
           cd extern/eat/tests/2d/
-          mpiexec -np 1 eat_obs_2d : -np 1 eat_filter_pdaf : -np 9 eat_model_2d
+          mpiexec --oversubscribe -np 1 eat_obs_2d : -np 1 eat_filter_pdaf : -np 9 eat_model_2d
