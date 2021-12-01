@@ -15,4 +15,4 @@
 	url = ../parsac.git
 [submodule "extern/eat"]
 	path = extern/eat
-	url = ../eat
+	url = ../eat.git
