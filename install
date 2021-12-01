@@ -25,12 +25,14 @@ cd -
 rm -rf ${WORK_DIR}
 
 # Build eat
-mkdir -p ${REPO_DIR}/build/eat
-cd ${REPO_DIR}/build/eat
+WORK_DIR=`mktemp -d`
+cd ${WORK_DIR}
 cmake ${REPO_DIR}/extern/eat -DFABM_BASE=${REPO_DIR}/extern/fabm -DPDAF_BASE=${REPO_DIR}/PDAF_V1.16_var_devel $FABM_ARGS
 make -j4 install
 
 # Build 2d test
 make test_eat_2d install
+cd -
+rm -rf ${WORK_DIR}
 
 cd ../..
