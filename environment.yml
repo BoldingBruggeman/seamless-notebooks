@@ -21,4 +21,5 @@ dependencies:
   - mpi4py
   - pip:
       - -e ./extern/parsac
+      - pyncview
       - https://www.parallelpython.com/downloads/pp/pp-1.6.4.4.zip
