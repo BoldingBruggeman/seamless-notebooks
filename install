@@ -29,6 +29,7 @@ WORK_DIR=`mktemp -d`
 cd ${WORK_DIR}
 cmake ${REPO_DIR}/extern/eat -DFABM_BASE=${REPO_DIR}/extern/fabm $FABM_ARGS
 make -j4 install
+cp -v ${REPO_DIR}/extern/eat/models/gotm/*.py ~/.local/bin/
 
 # Build 2d test
 make test_eat_2d install
