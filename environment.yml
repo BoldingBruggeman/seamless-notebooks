@@ -9,7 +9,7 @@ dependencies:
   - jupyterlab
   - cmake
   - numpy
-  - matplotlib
+  - matplotlib=3.4.*
   - scipy
   - ipympl
   - netcdf4
@@ -19,6 +19,7 @@ dependencies:
   - blas
   - lapack
   - mpi4py
+  - pyqt
   - pip:
       - -e ./extern/parsac
       - pyncview
