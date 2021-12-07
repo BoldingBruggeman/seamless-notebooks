@@ -8,19 +8,18 @@
 #SBATCH --output=%j.out
 #SBATCH --error=%j.err
 
-#KBmodule load anaconda3
+#conda init bash
 conda activate seamless-bb
 export PYTHONUNBUFFERED=TRUE
 
 hostnames=`scontrol show hostnames $SLURM_JOB_NODELIST | sed -z 's/\n/:'"$port"',/g'`
 echo Host names provided to eat: $hostnames
 
-cd seamless-notebooks/setups/northsea
-
 # launch the eat job
 echo Starting eat
+
 # ensemble run only
-srun -np 10 eat_model_gotm
+mpiexec -n 10 eat_model_gotm
 
 # assimilate the full period
 #srun -np 1 eat_obs_gotm.py --start "2016-01-01 12:00:00" --stop "2019-12-31 12:00:00" -o temp[-1] cci_sst.dat  : -np 1 eat_filter_pdaf : -np 10 eat_model_gotm
