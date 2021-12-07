@@ -8,15 +8,17 @@
 #SBATCH --output=%j.out
 #SBATCH --error=%j.err
 
+#KBmodule load anaconda3
 conda activate seamless-bb
 export PYTHONUNBUFFERED=TRUE
 
 hostnames=`scontrol show hostnames $SLURM_JOB_NODELIST | sed -z 's/\n/:'"$port"',/g'`
 echo Host names provided to eat: $hostnames
 
+cd seamless-notebooks/setups/northsea
+
 # launch the eat job
 echo Starting eat
-
 # ensemble run only
 srun -np 10 eat_model_gotm
 
