@@ -80,7 +80,7 @@ cp eat_pdaf.nml.org eat_pdaf.nml
 Edit eat_gotm.nml and un-comment the line with shared_yaml_file
 
 ```bash
-cp physics_yaml_files/gotm_????.yaml .
+cp yaml_files_physics/gotm_????.yaml .
 ```
 
 Ready to run.
@@ -89,6 +89,11 @@ First in pure ensemble mode:
 
 ```bash
 mpiexec -np 10 eat_model_gotm
+```
+or via a queue
+
+```bash
+sbatch run.sbatch
 ```
 
 Optionally view the difference:
@@ -104,5 +109,15 @@ On the command line:
 mpiexec --oversubscribe -np 1 eat_obs_gotm.py --start "2016-01-01 12:00:00" --stop "2016-03-15 12:00:00" -o temp[-1] cci_sst.dat  : -np 1 eat_filter_pdaf : -np 10 eat_model_gotm
 ```
 
-or via a queue:
+or via a queue
+
+```bash
+sbatch run.sbatch
+```
+
+Use multiplot to view ensemble:
+```bash
+multiplot -s "result_????.nc" -e "statistics(temp[:,:,57,0,0], 'obs')"
+```
+
 
