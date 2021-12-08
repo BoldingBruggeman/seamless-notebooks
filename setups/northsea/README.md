@@ -63,7 +63,7 @@ cp restart_files/restart_????.nc .
 On the command line:
 
 ```bash
-mpiexec --oversubscribe -np 1 eat_obs_gotm.py --start "2016-01-01 12:00:00" --stop "2019-12-31 12:00:00" -o temp[-1] cci_sst.dat  : -np 1 eat_filter_pdaf : -np 10 eat_model_gotm
+mpiexec -np 1 eat_obs_gotm.py --start "2016-01-01 12:00:00" --stop "2019-12-31 12:00:00" -o temp[-1] cci_sst.dat  : -np 1 eat_filter_pdaf : -np 10 eat_model_gotm
 ```
 
 or via a queue - please edit run.sbatch to reflect the type of run you are doing. We will need to maybe update run.sbatch to not use mpiexec - but srun.
@@ -105,8 +105,8 @@ Now in full DA model:
 
 On the command line:
 ```bash
-#mpiexec --oversubscribe -np 1 eat_obs_gotm.py --start "2016-01-01 12:00:00" --stop "2019-12-31 12:00:00" -o temp[-1] cci_sst.dat  : -np 1 eat_filter_pdaf : -np 10 eat_model_gotm 
-mpiexec --oversubscribe -np 1 eat_obs_gotm.py --start "2016-01-01 12:00:00" --stop "2016-03-15 12:00:00" -o temp[-1] cci_sst.dat  : -np 1 eat_filter_pdaf : -np 10 eat_model_gotm
+#mpiexec -np 1 eat_obs_gotm.py --start "2016-01-01 12:00:00" --stop "2019-12-31 12:00:00" -o temp[-1] cci_sst.dat  : -np 1 eat_filter_pdaf : -np 10 eat_model_gotm 
+mpiexec -np 1 eat_obs_gotm.py --start "2016-01-01 12:00:00" --stop "2016-03-15 12:00:00" -o temp[-1] cci_sst.dat  : -np 1 eat_filter_pdaf : -np 10 eat_model_gotm
 ```
 
 or via a queue
