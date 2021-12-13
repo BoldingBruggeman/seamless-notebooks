@@ -16,10 +16,11 @@ dependencies:
   - pyyaml
   - nco
   - salib
-  - blas
-  - lapack
-  - mpi4py
-  - pyqt
+  - blas    # for EAT
+  - lapack  # for EAT
+  - mpi4py  # for EAT
+  - cython  # for EAT
+  - pyqt    # for PyNcView
   - pip:
       - -e ./extern/parsac
       - pyncview
